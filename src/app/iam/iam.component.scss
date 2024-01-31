@@ -2,7 +2,7 @@
 
 section {
   @include dFlex();
-  margin-top: 200px;
+  margin-top: 109px;
   width: 100%;
   height: auto;
   flex-direction: column;
@@ -12,26 +12,74 @@ section {
 
   .imgContainer {
 
-   // position: relative; // Hier die Änderung
+    // position: relative; // Hier die Änderung
     width: 100%;
-    
+
     //height: 400px;
 
     img {
       position: relative;
       height: auto;
-      max-height: 500px;
+      max-height: 600px;
       max-width: fit-content;
       width: 100%;
       left: 50%; // Die Mitte der .imgContainer
       transform: translateX(-50%); // Verschiebung um die Hälfte der eigenen Breite nach links
     }
-    .itsMe{
+.svgBackground{
+  filter: blur(28px);
+  padding-top: 79px;
+}
+    .itsMe {
       position: absolute;
     }
 
     p {
       text-align: center;
+    }
+  }
+
+  .iamBottom {
+    
+    margin: 23px 0 0 0;
+    display: flex;
+
+    p {
+      margin: 0;
+      margin-block: 0;
+    }
+
+    .name {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 40px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    .font {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    .title {
+
+      height: 33px;
+     // width: 100%;
+      color: #9747FF;
+    }
+
+    .rotate {
+      
+      transform: rotate(-90deg);
+      margin-right: -35px;
+      //width: 88px;
+      //height: 33px;
+      //margin-bottom: -10px;
+
     }
   }
 
