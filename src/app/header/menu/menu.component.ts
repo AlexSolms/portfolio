@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output  } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -8,19 +8,16 @@ import { Component, OnInit, Input, EventEmitter, Output  } from '@angular/core';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent implements OnInit  {
- /*  @Input() init: boolean | undefined;
-  @Output() opened = new EventEmitter<any>();
- */
+
   active:boolean = false;
 
   ngOnInit() {
-    this.active =  false; //this.init ||
+    this.active = false; 
   }
 
   onBurgerClicked() {
     this.active = !this.active;
-    console.log('active: ', this.active)
-    //this.opened.emit();
+    console.log('active: ', this.active);
     document.getElementById('idMenuOpen')?.classList.toggle('openMenu');
     document.getElementById('idRoot')?.classList.toggle('noSroll');
      if(this.active)document.body.style.overflow = 'hidden';

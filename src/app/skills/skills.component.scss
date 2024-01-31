@@ -1,0 +1,8 @@
+@import './../app.component.scss';
+section{
+    @include dFlex();
+    width: 100%; 
+    p{
+        text-align: center;
+      }
+} 

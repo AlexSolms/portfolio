@@ -1,0 +1,9 @@
+@import './../app.component.scss';
+section{
+    @include dFlex();
+    flex-direction: column;
+    width: 100%; 
+    p{
+        text-align: center;
+      }
+} 

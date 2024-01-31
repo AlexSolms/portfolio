@@ -1,9 +1,15 @@
-section{
+@import './../app.component.scss';
+
+section {
+    @include dFlex($jc: space-between);
     position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    margin: 0 25px 0 0;
+    height: 109px;
+    width: 100vw;
     top: 0;
-    
+
+    span {
+        margin-left: 25px;
+    }
+
 }
