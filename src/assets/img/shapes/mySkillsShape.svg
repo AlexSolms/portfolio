@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="899"
+   height="977"
+   viewBox="0 0 899 977"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="mySkillsShape.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.8321392"
+     inkscape:cx="449.44403"
+     inkscape:cy="488.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="3032"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <g
+     filter="url(#filter0_f_413_3132)"
+     id="g1"
+     transform="matrix(1,0,0,-1,-5.9646607e-7,976.95697)">
+    <path
+       d="m 103.245,93.7535 c -69.5329,0.7911 257.662,513.0925 257.662,513.0925 0,0 119.014,65.171 209.816,132.635 -30.814,69.494 10.489,169.856 82.142,137.459 50.277,-22.732 -6.019,-80.901 -82.142,-137.459 16.598,-37.433 54.12,-65.91 119.095,-59.858 185.599,17.289 91.489,-101.972 91.489,-101.972 0,0 -74.453,-66.808 -65.32,-134.466 l 0.081,-0.602 C 725.126,375.496 725.852,370.121 461.097,282.755 195.552,195.127 172.777,92.9625 103.245,93.7535 Z"
+       fill="#fa7902"
+       id="path1" />
+  </g>
+  <defs
+     id="defs1">
+    <filter
+       id="filter0_f_413_3132"
+       x="0.547585"
+       y="0.75"
+       width="897.618"
+       height="975.457"
+       filterUnits="userSpaceOnUse"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         flood-opacity="0"
+         result="BackgroundImageFix"
+         id="feFlood1" />
+      <feBlend
+         mode="normal"
+         in="SourceGraphic"
+         in2="BackgroundImageFix"
+         result="shape"
+         id="feBlend1" />
+      <feGaussianBlur
+         stdDeviation="46.5"
+         result="effect1_foregroundBlur_413_3132"
+         id="feGaussianBlur1" />
+    </filter>
+  </defs>
+</svg>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="841"
+   height="935"
+   viewBox="0 0 841 935"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="contactShape.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     showguides="true"
+     inkscape:zoom="0.86951872"
+     inkscape:cx="420.92251"
+     inkscape:cy="467.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="3032"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <g
+     filter="url(#filter0_f_413_3128)"
+     id="g1"
+     transform="rotate(-110.9,346.31983,462.53894)">
+    <path
+       d="m 451.06,685.282 c -16.779,6.045 -32.968,11.579 -48.137,16.511 -105.428,16.887 -11.977,1.495 27.499,29.861 19.466,13.988 31.404,-17.803 20.638,-46.372 C 620.845,624.115 851.047,510.65 696.146,439.371 483.385,341.467 475.146,318.9 442.931,247.453 410.715,176.006 298.972,20.8404 222.642,132.149 c -76.331,111.309 -97.838,162.205 -94.807,230.08 3.031,67.876 133.364,96.486 9.779,191.632 -123.585,95.145 37.343,379.904 170.837,256.856 133.495,-123.048 -128.079,-89.606 20.943,-150.101 75.538,-30.665 110.598,-4.701 121.666,24.666 z"
+       fill="#ff4747"
+       id="path1" />
+  </g>
+  <defs
+     id="defs1">
+    <filter
+       id="filter0_f_413_3128"
+       x="0.394897"
+       y="0.160156"
+       width="839.942"
+       height="933.895"
+       filterUnits="userSpaceOnUse"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         flood-opacity="0"
+         result="BackgroundImageFix"
+         id="feFlood1" />
+      <feBlend
+         mode="normal"
+         in="SourceGraphic"
+         in2="BackgroundImageFix"
+         result="shape"
+         id="feBlend1" />
+      <feGaussianBlur
+         stdDeviation="46.5"
+         result="effect1_foregroundBlur_413_3128"
+         id="feGaussianBlur1" />
+    </filter>
+  </defs>
+</svg>
