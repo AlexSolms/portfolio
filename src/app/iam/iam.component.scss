@@ -4,30 +4,32 @@
   @include dFlex();
   position: relative;
   margin-top: 109px;
-  width: 100%;
+  width: 100dvw;
   height: auto;
   max-height: 705px;
   flex-direction: column;
 
-  button{
-    position: relative;
-    z-index: 16;
+  @media screen and (min-width: 900px) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
 
-  .imgContainer {
 
+  .imgContainer {
+    position: relative;
     width: 100%;
+    @include dFlex();
     // max-height: 705px;
 
     .iamImg {
-      position: relative;
+
       height: auto;
       max-height: 505px;
       max-width: fit-content;
       width: 100%;
-      left: 50%; // Die Mitte der .imgContainer
-      transform: translateX(-50%); // Verschiebung um die Hälfte der eigenen Breite nach links
+      // left: 50%; // Die Mitte der .imgContainer
+      // transform: translateX(-50%); // Verschiebung um die Hälfte der eigenen Breite nach links
     }
 
     .svgBackground {
@@ -36,82 +38,197 @@
     }
 
     .itsMe {
+      @include dFlex();
+      width: 100%;
+      height: 100%;
       position: absolute;
       z-index: 11;
+      /*  @media screen and (min-width: 900px) {
+        left: 300px;
+      } */
     }
 
     p {
       text-align: center;
     }
-  
 
 
-      .shape3 {
-        z-index: 15;
-        height: 300px;
-        width: 100dvw;
-        left: 0;
-        bottom: -130px;
-        position: absolute;
-      }
 
-      .shape2 {
-        
-        z-index: 10;
-        position: absolute;
-        height: 300px;
-        width: 60dvw;
-        left: 40dvw;
-        bottom: -110px;
+    .shape3 {
+      z-index: 15;
+      height: 300px;
+      min-width: 800px;
+      //max-width: 100dvw;
+      left: 0;
+      bottom: -130px;
+      position: absolute;
+    }
+
+    .shape2 {
+
+      z-index: 10;
+      position: absolute;
+      height: 700px;
+      width: 100dvw;
+      left: 0;
+      bottom: -360px;
       /*   @media screen and (min-width: 669px) {
           bottom: -80px;
           
         } */
-      }
-      
-}
-  .iamTxt {
-    position: relative;
-    margin: -55px 0 0 0; //je mehr ich noch drunterpacke, desto mehr muss ich das hier anpassen
-    display: flex;
-    z-index: 15;
-
-      @media screen and (min-width: 517px) {
-      margin: -75px 0 0 0;
-    } 
-
-    
-
-    p {
-      margin: 0;
-      margin-block: 0;
     }
 
-    .name {
-      font-size: 32px;
-      font-weight: 400;
-      line-height: 40px;
-      letter-spacing: 0em;
-      text-align: left;
-    }
-
-    .font {
-      font-size: 24px;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: left;
-    }
-
-    .title {
-      height: 33px;
-      color: #9747FF;
-    }
-
-    .rotate {
-      transform: rotate(-90deg);
-      margin-right: -35px;
-    }
   }
 
+  .moveContainer {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    .iamTxt {
+      position: relative;
+      margin: -55px 0 0 0; //je mehr ich noch drunterpacke, desto mehr muss ich das hier anpassen
+      display: flex;
+      z-index: 15;
+
+      @media screen and (min-width: 517px) {
+        margin: -75px 0 0 0;
+        min-width: 50dvw;
+        justify-content: center;
+      }
+
+
+
+      p {
+        margin: 0;
+        margin-block: 0;
+      }
+
+      .name {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+
+      .font {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+
+      .title {
+        height: 33px;
+        color: #9747FF;
+      }
+
+      .rotate {
+        transform: rotate(-90deg);
+        margin-right: -35px;
+      }
+    }
+
+    .btnFrame {
+      position: relative;
+      z-index: 16;
+      width: 120px;
+      height: 65px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .letsTalkButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        width: 93px;
+        height: 49px;
+        background-color: rgba(250, 121, 2, 1);
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        color: rgba(255, 255, 255, 1);
+        text-decoration: none;
+        text-align: center;
+        transition: 0.3s;
+
+        &:hover {
+          width: 113px;
+          height: 59px;
+          background-color: rgba(255, 71, 71, 1);
+          font-size: 18px;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+.socialContainer {
+  @include dFlex($jc: space-between);
+  margin-top: 16px;
+  flex-direction: row;
+  width: 100%;
+
+  position: relative;
+  z-index: 17;
+
+  @media screen and (min-width: 870px) {
+    max-width: none;
+    // position: static;
+    // justify-content: flex-start;
+    max-width: 146px;
+  }
+}
+
+.bar {
+  width: 55px;
+  height: 3px;
+  border: 3px;
+  background-color: rgba(255, 71, 71, 1);
+}
+
+.socialIcons {
+  @include dFlex($g: 42px);
+  width: 30px;
+  height: 30px;
+
+  @media screen and (min-width: 870px) {
+    position: relative;
+    left: 200px
+  }
+}
+
+.mail {
+  width: 55px;
+  height: auto;
+  min-height: 1px;
+  @include dFlex();
+
+  a {
+    font-size: 23px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    display: none;
+
+    @media screen and (min-width: 870px) {
+      display: block;
+      position: relative;
+      left: 500px
+    }
+  }
 }
