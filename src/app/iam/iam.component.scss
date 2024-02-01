@@ -1,48 +1,86 @@
 @import './../app.component.scss';
 
-section {
+.iam {
   @include dFlex();
+  position: relative;
   margin-top: 109px;
   width: 100%;
   height: auto;
+  max-height: 705px;
   flex-direction: column;
 
-
+  button{
+    position: relative;
+    z-index: 16;
+  }
 
 
   .imgContainer {
 
-    // position: relative; // Hier die Änderung
     width: 100%;
+    // max-height: 705px;
 
-    //height: 400px;
-
-    img {
+    .iamImg {
       position: relative;
       height: auto;
-      max-height: 600px;
+      max-height: 505px;
       max-width: fit-content;
       width: 100%;
       left: 50%; // Die Mitte der .imgContainer
       transform: translateX(-50%); // Verschiebung um die Hälfte der eigenen Breite nach links
     }
-.svgBackground{
-  filter: blur(28px);
-  padding-top: 79px;
-}
+
+    .svgBackground {
+      filter: blur(28px);
+      padding-top: 79px;
+    }
+
     .itsMe {
       position: absolute;
+      z-index: 11;
     }
 
     p {
       text-align: center;
     }
-  }
+  
 
-  .iamBottom {
-    
-    margin: 23px 0 0 0;
+
+      .shape3 {
+        z-index: 15;
+        height: 300px;
+        width: 100dvw;
+        left: 0;
+        bottom: -130px;
+        position: absolute;
+      }
+
+      .shape2 {
+        
+        z-index: 10;
+        position: absolute;
+        height: 300px;
+        width: 60dvw;
+        left: 40dvw;
+        bottom: -110px;
+      /*   @media screen and (min-width: 669px) {
+          bottom: -80px;
+          
+        } */
+      }
+      
+}
+  .iamTxt {
+    position: relative;
+    margin: -55px 0 0 0; //je mehr ich noch drunterpacke, desto mehr muss ich das hier anpassen
     display: flex;
+    z-index: 15;
+
+      @media screen and (min-width: 517px) {
+      margin: -75px 0 0 0;
+    } 
+
+    
 
     p {
       margin: 0;
@@ -66,20 +104,13 @@ section {
     }
 
     .title {
-
       height: 33px;
-     // width: 100%;
       color: #9747FF;
     }
 
     .rotate {
-      
       transform: rotate(-90deg);
       margin-right: -35px;
-      //width: 88px;
-      //height: 33px;
-      //margin-bottom: -10px;
-
     }
   }
 
