@@ -1,18 +1,60 @@
-
 @mixin dFlex($jc: center, $ai: center, $g: 0px) {
-    display: flex;
-    justify-content: $jc;
-    align-items: $ai;
-    gap: $g;
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+}
+
+@mixin size($h: auto, $hm: 100vh, $w: 100%, $wm: fit-content) {
+  height: $h;
+  max-height: $hm;
+  width: $w;
+  max-width: $wm;
+}
+
+.allComponents {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.btnFrame {
+  position: relative;
+  z-index: 16;
+  width: 120px;
+  height: 65px;
+  @include dFlex();
+
+  .btnStettings {
+    @include dFlex();
+    margin-top: 16px;
+    width: 93px;
+    height: 49px;
+    //background-color: rgba(250, 121, 2, 1);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    /* color: rgba(255, 255, 255, 1);
+    text-decoration: none; */
+    text-align: center;
+    transition: 0.3s;
+
+    &:hover {
+      width: 113px;
+      height: 59px;
+     // background-color: rgba(255, 71, 71, 1);
+      font-size: 18px;
+    }
+
   }
-   
-  @mixin size($h: auto, $hm: 100vh, $w: 100%, $wm: fit-content) {
-    height: $h;
-    max-height: $hm;
-    width: $w;
-    max-width: $wm;
-  }
-  
-  .allComponents{
-    overflow-x: hidden;
-  }
+
+}
+.center{
+  @include dFlex();
+}

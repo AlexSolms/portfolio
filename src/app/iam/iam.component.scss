@@ -38,6 +38,7 @@
       display: block;
     }
   }
+
   .shape4 {
     position: absolute;
     right: -230px;
@@ -104,7 +105,7 @@
 
     .iamTxt {
       position: relative;
-      margin: -55px 0 0 0; 
+      margin: -55px 0 0 0;
       display: flex;
       z-index: 15;
 
@@ -190,7 +191,7 @@
       }
     }
 
-    .btnFrame {
+    /* .btnFrame {
       position: relative;
       z-index: 16;
       width: 120px;
@@ -199,33 +200,33 @@
       justify-content: center;
       align-items: center;
 
-      .letsTalkButton {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 16px;
-        width: 93px;
-        height: 49px;
-        background-color: rgba(250, 121, 2, 1);
-        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        border-radius: 10px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 19px;
-        letter-spacing: 0em;
-        color: rgba(255, 255, 255, 1);
-        text-decoration: none;
-        text-align: center;
-        transition: 0.3s;
+      
+      } */
+    .letsTalkButton {
+      /*  display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-top: 16px;
+         width: 93px;
+         height: 49px; */
+      background-color: rgba(250, 121, 2, 1);
+      /*  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+         border-radius: 10px;
+         font-size: 16px;
+         font-weight: 400;
+         line-height: 19px;
+         letter-spacing: 0em;
+         color: rgba(255, 255, 255, 1);
+         text-decoration: none;
+         text-align: center;
+         transition: 0.3s; */
 
-        &:hover {
-          width: 113px;
-          height: 59px;
-          background-color: rgba(255, 71, 71, 1);
-          font-size: 18px;
-        }
+      &:hover {
+        /* width: 113px;
+           height: 59px; */
+        background-color: rgba(255, 71, 71, 1);
+        /*  font-size: 18px; */
       }
-
     }
 
   }
@@ -243,8 +244,6 @@
 
   @media screen and (min-width: 870px) {
     max-width: none;
-    // position: static;
-    // justify-content: flex-start;
     max-width: 146px;
   }
 }
