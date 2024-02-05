@@ -7,56 +7,58 @@ section {
 
   .content {
     width: 100dvw;
-  
-  }
 
-  .skillBgImg{
-    position: absolute;
-    width: 410px;
-    height: 600px;
-    z-index: -1;
-    left: -283px;
-    bottom: -307px;
-  }
+    .hedlineCon {
+      .headline {
+        @include dFlex($jc: flex-end, $g: 16px);
 
-  .skillTxt {
-    width: 90dvw;
-    text-align: right;
-    margin-top: -16px;
-    margin-bottom: 48px;
-  }
+        .bar {
+          width: 5vw;
+          height: 3px;
+          border: 3px;
+          background-color: rgba(255, 71, 71, 1);
+        }
+      }
 
-  .headline {
-    @include dFlex($jc: flex-end, $g: 16px);
+      .skillTxt {
+        width: 90dvw;
+        text-align: right;
+        margin-top: -16px;
+        margin-bottom: 48px;
+      }
 
+      .getInTouchButton2 {
+        display: none;
+        width: 222px;
+        height: 65px;
     
-  /*   h2 {
-      font-size: 45px;
-      font-weight: 700;
-      line-height: 54px;
-      letter-spacing: 0em;
-      text-align: right;
+        a {
+          width: 200px;
+          height: 58px;
+    
+          &:hover {
+            
+             width: 220px;
+            height: 63px; 
+    
+          }
+      }
+
     }
- */
-    .bar {
-      width: 5vw;
-      height: 3px;
-      border: 3px;
-      background-color: rgba(255, 71, 71, 1);
-    }
+
   }
+}
 
   .iconCon {
-    //max-width: 50vw;
     display: grid;
-   // width: 100dvw;
-    grid-template-columns:repeat(4, 1fr); //77px 77px 77px 77px;
-    grid-template-rows: repeat(4, 100px); // 100px 100px 100px;
-     align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    align-items: center;
     justify-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     row-gap: 41px;
     flex: 1;
+
     .innerIconCon {
       @include dFlex($g: 8px);
       flex-direction: column;
@@ -119,9 +121,29 @@ section {
 
   }
 
-  .getInTouchButton2 {
-    display: none;
+  .getInTouchButton1 {
+    width: 175px;
+    height: 55px;
+
+    a {
+      width: 158px;
+      height: 49px;
+
+      &:hover {
+        
+         width: 173px;
+        height: 53px; 
+
+      }
+    }
   }
 
-
+  .skillBgImg {
+    position: absolute;
+    width: 410px;
+    height: 600px;
+    z-index: -1;
+    left: -283px;
+    bottom: -307px;
+  }
 }

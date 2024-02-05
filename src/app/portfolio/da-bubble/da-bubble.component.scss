@@ -1,0 +1,80 @@
+@import './../../app.component.scss';
+
+section {
+    @include dFlex();
+    flex-direction: column;
+    width: 90dvw;
+
+    @media screen and (min-width: 1000px) {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .imgContainer {
+        max-width: 620px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .infoContainer {
+
+        @media screen and (min-width: 1000px) {
+            @include dFlex($ai: flex-start);
+            flex-direction: column;
+        }
+        h3{
+            margin-top: 0;
+        }
+
+        .skillset {
+            font-size: 23px;
+            line-height: 28px;
+            color: rgba(250, 121, 2, 1);
+            margin-block: 0;
+        }
+
+        .description {
+            @media screen and (min-width: 1000px) {
+                text-align: left;
+            }
+        }
+    }
+
+    .btnContainer {
+        @include dFlex($g: 50px);
+
+        @media screen and (min-width: 1000px) {
+            justify-content: flex-start;
+            gap: 86px;
+        }
+
+        .testbtn {
+            background-color: rgba(255, 71, 71, 1);
+            width: 152px;
+            height: 58px;
+
+            &:hover {
+                background-color: rgba(250, 121, 2, 1);
+                width: 152px;
+                height: 58px;
+                font-size: 16px;
+            }
+        }
+
+        .gitBtn {
+            background-color: #141D2F;
+            border: 1px solid rgba(250, 121, 2, 1);
+            width: 152px;
+            height: 58px;
+
+            &:hover {
+                background-color: rgba(250, 121, 2, 1);
+                width: 152px;
+                height: 58px;
+                font-size: 16px;
+            }
+        }
+    }
+}
