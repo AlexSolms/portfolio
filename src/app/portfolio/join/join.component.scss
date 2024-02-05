@@ -1,0 +1,53 @@
+@import './../../app.component.scss';
+
+section {
+    @include dFlex();
+    flex-direction: column;
+    width: 90dvw;
+
+    @media screen and (min-width: 700px) {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
+    .imgContainer {
+        max-width: 339px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .infoContainer {
+        
+        .skillset {
+            font-size: 23px;
+            line-height: 28px;
+            color: rgba(250, 121, 2, 1);
+            margin-block: 0;
+        }
+    }
+
+    .btnContainer {
+        @include dFlex();
+        .testbtn{
+            background-color: rgba(255, 71, 71, 1);
+            &:hover{
+                background-color: rgba(250, 121, 2, 1);
+                width: 93px;
+                height: 49px;
+                font-size: 16px;
+            }
+        }
+        .gitBtn{
+            background-color:#141D2F;
+            border: 1px solid rgba(250, 121, 2, 1);
+            &:hover{
+                background-color: rgba(250, 121, 2, 1);
+                width: 93px;
+                height: 49px;
+                font-size: 16px;
+            }
+        }
+    }
+}
