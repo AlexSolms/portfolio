@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { Component} from '@angular/core';
+import { NgForm, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-mail',
@@ -9,6 +9,10 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './mail.component.scss'
 })
 export class MailComponent{
-  
+  form = {
+    fullname:'',
+    email:'',
+    message:''
+  }
 
 }
