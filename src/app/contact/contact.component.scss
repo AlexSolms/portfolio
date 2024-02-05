@@ -3,7 +3,31 @@ section{
     @include dFlex();
     flex-direction: column;
     width: 100%; 
-    p{
-        text-align: center;
+    .headline {
+      @include dFlex($g: 16px, $jc: flex-start);
+      width: 100dvw;
+
+      .bar {
+        width: 20px;
+        border: 3px;
+        height: 3px;
+        background-color: rgba(255, 71, 71, 1);
       }
+    }
+.content{
+  @include dFlex();
+  flex-direction: column;
+  .txt{
+    max-width: 473px;
+    h3{
+      text-align: left;
+      color: white;
+    }
+    p{
+      text-align: left;
+    }
+    
+  }
+}
+
 } 
