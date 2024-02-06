@@ -11,3 +11,4 @@ import { MailComponent } from './mail/mail.component';
 export class ContactComponent {
 
 }
+

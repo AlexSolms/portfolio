@@ -1,0 +1,166 @@
+@import './../../app.component.scss';
+form {
+    @include dFlex();
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: left;
+    width: 90dvw;
+    max-width: 617px;
+
+    .chkBoxCon {
+      @include dFlex($g: 4px, $ai: flex-start);
+      font-size: 14px;
+      line-height: 17px;
+      padding-left: 8px;
+      margin-top: 16px;
+
+      a {
+        color: rgba(151, 71, 255, 1);
+      }
+
+      .chkBox {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+
+          &:checked~.customChkBox:after {
+            display: block;
+          }
+        }
+
+        .customChkBox {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 18px;
+          width: 18px;
+          border-color: rgba(250, 121, 2, 1);
+
+          border-style: solid;
+          border-width: 2px;
+          background-color: rgba(20, 29, 47, 1);
+
+          &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 5px;
+            top: 1px;
+            width: 5px;
+            height: 10px;
+            border: solid rgba(250, 121, 2, 1);
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+
+    .inputFieldsCon {
+      .requiredTxt {
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(230, 28, 64, 1);
+        padding: 4px 0 4px 16px;
+      }
+
+      width: 100%;
+
+      .inputField {
+        position: relative;
+        @include dFlex($g: 4px, $jc: space-between);
+        width: 100%;
+
+        input {
+          height: 40px;
+          flex: 1;
+          background-color: rgba(20, 29, 47, 1);
+          color: white;
+          font-family: Poppins;
+          font-size: 16px;
+          line-height: 17px;
+          border-radius: 10px;
+          border: 1px solid rgba(255, 71, 71, 1);
+          padding-left: 16px;
+          padding-right: 50px;
+
+          &::placeholder {
+            color: white;
+          }
+
+          &:focus-visible {
+            outline: 1px solid rgba(250, 121, 2, 1);
+            border-radius: 10px;
+          }
+        }
+
+        textarea {
+          height: 298px;
+          background-color: rgba(20, 29, 47, 1);
+          flex: 1;
+          border: none;
+          color: white;
+          font-size: 16px;
+          line-height: 17px;
+          font-family: Poppins;
+          border-radius: 10px;
+          border: 1px solid rgba(255, 71, 71, 1);
+          padding: 16px 50px 16px 16px;
+
+          &::placeholder {
+            color: white;
+          }
+
+          &:focus-visible {
+            outline: 1px solid rgba(250, 121, 2, 1);
+            border-radius: 10px;
+          }
+        }
+
+        .filledSign {
+          top: 8px;
+          right: 8px;
+          position: absolute;
+          display: none;
+        }
+
+        .emptySign {
+          top: 8px;
+          right: 8px;
+          position: absolute;
+          display: none;
+        }
+      }
+    }
+
+    .btnFrame {
+      width: 210px;
+
+      .btnStettings {
+        width: 195px;
+        color: white;
+
+        &:hover {
+          width: 205px;
+        }
+      }
+    }
+  }

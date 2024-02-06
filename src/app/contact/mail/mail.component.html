@@ -1,1 +1,49 @@
-<p>mail works!</p>
+<form action="">
+    <div class="inputFieldsCon">
+        <div class="inputField">
+            <label for="idName"></label>
+            <input type="text" name="name" id="idName" placeholder="Your name please" required minlength="3"
+                size="10">
+            <!-- <div class="signPlaceholder"> -->
+            <img src="assets/img/icons/filledSign.svg" alt="filled" id="id" class="filledSign">
+            <img src="assets/img/icons/warningSign.svg" alt="empty" id="id" class="emptySign">
+            <!-- </div> -->
+        </div>
+        <div class="requiredTxt">Your name is required</div>
+    </div>
+    <div class="inputFieldsCon">
+        <div class="inputField">
+            <label for="idEmail"></label>
+            <input type="email" name="email" id="idEmail" required placeholder="Your email">
+            <!-- <div class="signPlaceholder"> -->
+            <img src="assets/img/icons/filledSign.svg" alt="filled" id="id" class="filledSign">
+            <img src="assets/img/icons/warningSign.svg" alt="empty" id="id" class="emptySign">
+            <!-- </div> -->
+        </div>
+        <div class="requiredTxt">Your email is required</div>
+    </div>
+    <div class="inputFieldsCon">
+        <div class="inputField">
+            <label for="idMessage"></label>
+            <textarea name="message" id="idMessage" placeholder="Your message" required></textarea>
+            <!-- <div class="signPlaceholder"> -->
+            <img src="assets/img/icons/filledSign.svg" alt="filled" id="id" class="filledSign">
+            <img src="assets/img/icons/warningSign.svg" alt="empty" id="id" class="emptySign">
+            <!-- </div> -->
+        </div>
+        <div class="requiredTxt">Your message is empty</div>
+    </div>
+    <div class="chkBoxCon">
+        <label for="idChkBox" class="chkBox">
+            <input type="checkbox" name="chkbox" id="idChkBox" required>
+            <span class="customChkBox"></span>
+        </label>
+        <span>
+            I've read the <a href="">privacy policy</a> and agree to the processing of my data as
+            outlined.</span>
+    </div>
+    <div class="btnFrame">
+        <button class="btnStettings" type="submit" disabled>Send message :&#41;</button>
+    </div>
+</form>
+
