@@ -24,6 +24,10 @@ export class MailComponent {
     console.log(this.contactData);
   }
 
+  test(){
+    console.log('test');
+  }
+
 }
 
 
