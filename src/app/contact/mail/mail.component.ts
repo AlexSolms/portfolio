@@ -1,18 +1,29 @@
-import { Component} from '@angular/core';
-import { NgForm, ReactiveFormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-mail',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [
+    FormsModule
+  ],
   templateUrl: './mail.component.html',
   styleUrl: './mail.component.scss'
 })
-export class MailComponent{
-  form = {
-    fullname:'',
-    email:'',
-    message:''
+export class MailComponent {
+
+  contactData = {
+    name: "",
+    email: "",
+    message: ""
+  }
+
+  onSubmit(ngForm: NgForm) {
+    if(ngForm.valid && ngForm.submitted)
+    console.log(this.contactData);
   }
 
 }
+
+
