@@ -1,19 +1,23 @@
-<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" id="idContactForm">
     <div class="inputFieldsCon">
         <div class="inputField">
             <label for="idName"></label>
             <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" id="idName" placeholder="Your name please"
-                required minlength="3" size="10">
+                required minlength="3" size="30">
+                
             <!-- <div class="signPlaceholder"> -->
-            <img src="assets/img/icons/filledSign.svg" alt="filled" id="id" class="filledSign">
-            <img src="assets/img/icons/warningSign.svg" alt="empty" id="id" class="emptySign">
+            <img src="assets/img/icons/filledSign.svg" alt="filled" id="idFilledName" class="filledSign">
+            <img src="assets/img/icons/warningSign.svg" alt="empty" id="idEmptyName" class="emptySign">
             <!-- </div> -->
         </div>
-        <div class="requiredTxt">
-            @if (!name.valid && name.touched){
+        <div class="requiredTxt">     
+            @if (!name.valid && name.touched){ 
             <span>You havn't add a name with at least 3 characters!</span>
-        {{test()}};
+            {{test(false, "Name")}}
             }
+            @else if (name.valid && name.touched){ 
+                {{test(true, "Name")}}
+            }    
         </div>
     </div>
     <div class="inputFieldsCon">
@@ -22,14 +26,18 @@
             <input #mail="ngModel" [(ngModel)]="contactData.email" type="email" name="email" id="idEmail" required
                 placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
             <!-- <div class="signPlaceholder"> -->
-            <img src="assets/img/icons/filledSign.svg" alt="filled" id="id" class="filledSign">
-            <img src="assets/img/icons/warningSign.svg" alt="empty" id="id" class="emptySign">
+            <img src="assets/img/icons/filledSign.svg" alt="filled" id="idFilledEmail" class="filledSign">
+            <img src="assets/img/icons/warningSign.svg" alt="empty" id="idEmptyEmail" class="emptySign">
             <!-- </div> -->
         </div>
 
         <div class="requiredTxt">
             @if (!mail.valid && mail.touched){
             <span>Your mail is empty</span>
+            {{test(false, "Email")}}
+            }
+            @else if (mail.valid  && mail.touched){ 
+                {{test(true, "Email")}}
             }
         </div>
 
@@ -40,28 +48,39 @@
             <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="idMessage"
                 placeholder="Your message" required></textarea>
             <!-- <div class="signPlaceholder"> -->
-            <img src="assets/img/icons/filledSign.svg" alt="filled" id="id" class="filledSign">
-            <img src="assets/img/icons/warningSign.svg" alt="empty" id="id" class="emptySign">
+            <img src="assets/img/icons/filledSign.svg" alt="filled" id="idFilledMessage" class="filledSign">
+            <img src="assets/img/icons/warningSign.svg" alt="empty" id="idEmptyMessage" class="emptySign">
             <!-- </div> -->
         </div>
 
         <div class="requiredTxt">
             @if (!message.valid && message.touched){
             <span>Your message is empty</span>
+            {{test(false, "Message")}}
+            }
+            @else if (message.valid  && message.touched){ 
+                {{test(true, "Message")}}
             }
         </div>
 
     </div>
     <div class="chkBoxCon">
         <label for="idChkBox" class="chkBox">
-            <input type="checkbox" name="chkbox" id="idChkBox" required>
+            <input [(ngModel)]="checkboxState"   type="checkbox" name="chkbox" id="idChkBox" required>
             <span class="customChkBox"></span>
         </label>
         <span>
             I've read the <a href="">privacy policy</a> and agree to the processing of my data as
             outlined.</span>
     </div>
-    <div class="btnFrame">
-        <button class="btnStettings" type="submit">Send message :&#41;</button>
-    </div>
+    @if (!contactForm.valid || !checkboxState) {
+        <div class="btnFrame">
+            <button class="btnStettings disabledBtn" type="submit" disabled>Send message :&#41;</button>
+        </div>
+    }@else if(contactForm.valid && checkboxState){
+        <div class="btnFrame">
+            <button class="btnStettings" type="submit" >Send message :&#41;</button>
+        </div>
+    }
+    
 </form>
