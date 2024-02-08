@@ -6,11 +6,11 @@ section {
   width: 100%;
 
   .headline {
-    @include dFlex($g: 16px, $jc: flex-start);
+    @include dFlex($g: 4px, $jc: flex-start);
     width: 100dvw;
-
+    margin-top: 1em;
     .bar {
-      width: 20px;
+      width: 5dvw;
       border: 3px;
       height: 3px;
       background-color: rgba(255, 71, 71, 1);
@@ -24,6 +24,7 @@ section {
 
     .txt {
       max-width: 473px;
+      margin: 0 8px;
 
       h3 {
         text-align: left;

@@ -211,6 +211,7 @@ form {
 
   .btnFrame {
     width: 210px;
+    margin: 1em 0 2em 0;
 
     .disabledBtn {
       cursor: default !important;
@@ -219,7 +220,6 @@ form {
       &:hover {
         width: 175px !important;
         height: 45px !important;
-
         font-size: 90% !important;
         background-color: rgb(138, 136, 136) !important;
       }

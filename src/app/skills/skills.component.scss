@@ -2,52 +2,60 @@
 
 section {
   @include dFlex();
+  flex-direction: column;
   width: 100%;
   position: relative;
+  
+  /*  .content {
+    width: 90dvw; */
 
-  .content {
-    width: 100dvw;
+  .hedlineCon {
 
-    .hedlineCon {
-      .headline {
-        @include dFlex($jc: flex-end, $g: 16px);
+    .headline {
+      @include dFlex($jc: flex-end, $g: 8px);
+      width: 100dvw;
 
-        .bar {
-          width: 5vw;
-          height: 3px;
-          border: 3px;
-          background-color: rgba(255, 71, 71, 1);
+      .bar {
+        width: 5vw;
+        height: 3px;
+        border: 3px;
+        background-color: rgba(255, 71, 71, 1);
+      }
+    }
+  }
+
+  .skillTxtCon {
+    width: 90dvw;
+
+    .skillTxt {
+
+      text-align: right;
+      margin-top: -16px;
+      margin-bottom: 48px;
+    }
+
+    .getInTouchButton2 {
+      display: none;
+      width: 222px;
+      height: 65px;
+
+      a {
+        width: 200px;
+        height: 58px;
+
+        &:hover {
+
+          width: 220px;
+          height: 63px;
+
         }
-      }
-
-      .skillTxt {
-        width: 90dvw;
-        text-align: right;
-        margin-top: -16px;
-        margin-bottom: 48px;
-      }
-
-      .getInTouchButton2 {
-        display: none;
-        width: 222px;
-        height: 65px;
-    
-        a {
-          width: 200px;
-          height: 58px;
-    
-          &:hover {
-            
-             width: 220px;
-            height: 63px; 
-    
-          }
       }
 
     }
 
+
+
   }
-}
 
   .iconCon {
     display: grid;
@@ -130,9 +138,9 @@ section {
       height: 49px;
 
       &:hover {
-        
-         width: 173px;
-        height: 53px; 
+
+        width: 173px;
+        height: 53px;
 
       }
     }

@@ -4,7 +4,8 @@ section {
   @include dFlex($g: 24px);
   flex-direction: column;
   width: 100%;
-  position: relative; //nötig?
+  position: relative; 
+  margin-top: 1em;
 
   p {
     text-align: center;
