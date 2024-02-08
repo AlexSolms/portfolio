@@ -1,16 +1,42 @@
 @import './../app.component.scss';
 
 section {
-    @include dFlex($jc: space-between);
+    @include dFlex();
     position: fixed;
-    margin: 0 25px 0 0;
+    margin: 0 32px 0 0;
     height: 109px;
-    width: 100vw;
+     width: 100%;
     top: 0;
-background-color: rgba(20, 29, 47, 1) ;
-z-index: 99;
-    span {
-        margin-left: 25px;
-    }
+    background-color: rgba(20, 29, 47, 1);
+    z-index: 99;
 
+    /* span {
+        margin-left: 25px;
+    } */
+    .content {
+        @include dFlex($jc: space-between);
+        width: 90dvw;
+        .menuDesktop {
+            @include dFlex($jc: space-between, $g: 32px);
+            display: none;
+        }
+
+        @media screen and (min-width: 550px) {
+            app-menu {
+                display: none;
+            }
+
+            .menuDesktop {
+                @include dFlex($jc: space-between, $g: 32px);
+                display: flex !important;
+
+                a {
+                    font-size: 23px;
+                    font-weight: 400;
+                    line-height: 28px;
+                }
+            }
+
+        }
+    }
 }

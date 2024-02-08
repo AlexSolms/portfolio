@@ -3,7 +3,7 @@
         <div class="inputField">
             <label for="idName"></label>
             <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" id="idName" placeholder="Your name please"
-                required minlength="3" size="30">
+                required minlength="3" maxlength="30">
                 
             <!-- <div class="signPlaceholder"> -->
             <img src="assets/img/icons/filledSign.svg" alt="filled" id="idFilledName" class="filledSign">
