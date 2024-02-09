@@ -1,34 +1,28 @@
-@import './../../app.component.scss';
+@import './../../../app.component.scss';
 
 section {
     @include dFlex();
     flex-direction: column;
     width: 90dvw;
-   // max-width: 1168px;
-   // margin-left: 35px;
-    
 
     @media screen and (min-width: 1000px) {
-        flex-direction: row;
-        justify-content: flex-start;
+        flex-direction: row-reverse;
+        justify-content: flex-end; // checken
     }
 
     .imgContainer {
         max-width: 620px;
-        
 
         img {
             width: 100%;
-            
         }
     }
 
     .infoContainer {
 
         @media screen and (min-width: 1000px) {
-            @include dFlex($ai: flex-start);
+            @include dFlex($ai: flex-end);
             flex-direction: column;
-            max-width: 310px;
         }
         h3{
             margin-top: 0;
@@ -43,7 +37,7 @@ section {
 
         .description {
             @media screen and (min-width: 1000px) {
-                text-align: left;
+                text-align: right;
             }
         }
     }

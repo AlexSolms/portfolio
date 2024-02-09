@@ -1,4 +1,4 @@
-@import './../../app.component.scss';
+@import './../../../app.component.scss';
 
 section {
     @include dFlex();
@@ -6,8 +6,8 @@ section {
     width: 90dvw;
 
     @media screen and (min-width: 1000px) {
-        flex-direction: row-reverse;
-        justify-content: flex-end; // checken
+        flex-direction: row;
+        justify-content: flex-start;
     }
 
     .imgContainer {
@@ -21,7 +21,7 @@ section {
     .infoContainer {
 
         @media screen and (min-width: 1000px) {
-            @include dFlex($ai: flex-end);
+            @include dFlex($ai: flex-start);
             flex-direction: column;
         }
         h3{
@@ -37,7 +37,7 @@ section {
 
         .description {
             @media screen and (min-width: 1000px) {
-                text-align: right;
+                text-align: left;
             }
         }
     }

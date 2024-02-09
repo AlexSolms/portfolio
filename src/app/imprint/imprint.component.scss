@@ -1,0 +1,9 @@
+@import './../app.component.scss';
+
+
+section {
+    margin-top: 109px;
+    @include dFlex();
+    flex-direction: column;
+    height: 100vh;
+}
