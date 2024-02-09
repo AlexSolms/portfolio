@@ -4,9 +4,11 @@ section {
   @include dFlex();
   flex-direction: column;
   width: 100%;
+ 
 
   .impBar {
     width: 100%;
+    max-width: $maxScreenWidth;
     height: 4px;
     background-color: rgba(250, 121, 2, 1);
     margin-block-end: 1em;
@@ -22,7 +24,7 @@ section {
     @include dFlex($jc: space-between);
     height: 40px;
     width: 174px;
-
+    max-width: $maxScreenWidth;
     a {
       width: 30px;
       height: 30px;

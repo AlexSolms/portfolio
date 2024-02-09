@@ -16,6 +16,7 @@ section {
     .content {
         @include dFlex($jc: space-between);
         width: 90dvw;
+        max-width: $maxScreenWidth;
         .menuDesktop {
             @include dFlex($jc: space-between, $g: 32px);
             display: none;

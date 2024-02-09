@@ -4,23 +4,28 @@ section {
     @include dFlex();
     flex-direction: column;
     width: 90dvw;
+    max-width: 1200px;
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 1050px) {
         flex-direction: row-reverse;
         justify-content: flex-end; // checken
+        //gap: 50px;
     }
 
     .imgContainer {
         max-width: 620px;
-
+        @include dFlex();
         img {
             width: 100%;
+            @media screen and (min-width: 1050px) {
+                width: max-content;
+            }     
         }
     }
 
     .infoContainer {
 
-        @media screen and (min-width: 1000px) {
+        @media screen and (min-width: 1050px) {
             @include dFlex($ai: flex-end);
             flex-direction: column;
         }
@@ -36,7 +41,7 @@ section {
         }
 
         .description {
-            @media screen and (min-width: 1000px) {
+            @media screen and (min-width: 1050px) {
                 text-align: right;
             }
         }
@@ -45,7 +50,7 @@ section {
     .btnContainer {
         @include dFlex($g: 50px);
 
-        @media screen and (min-width: 1000px) {
+        @media screen and (min-width: 1050px) {
             justify-content: flex-start;
             gap: 86px;
         }

@@ -2,59 +2,97 @@
 
 section {
   @include dFlex();
-  flex-direction: column;
+  // flex-direction: column;
   width: 100%;
-  position: relative;
-  
-  /*  .content {
-    width: 90dvw; */
+  // position: relative;
 
-  .hedlineCon {
+  .content {
+    @include dFlex();
+    flex-direction: column;
+    position: relative;
+    max-width: $maxScreenWidth;
 
-    .headline {
-      @include dFlex($jc: flex-end, $g: 8px);
-      width: 100dvw;
-
-      .bar {
-        width: 5vw;
-        height: 3px;
-        border: 3px;
-        background-color: rgba(255, 71, 71, 1);
-      }
+    @media screen and (min-width: 1050px) {
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      //width: 90dvw;
+      width: 100%;
+      padding-left: 5dvw;
     }
   }
 
-  .skillTxtCon {
-    width: 90dvw;
+  .headlineOuterCon {
+    @media screen and (min-width: 1050px) {
+      display: block;
+      
+    }
+    .headlineCon {
+      @media screen and (min-width: 1050px) {
+        @include dFlex($jc: flex-end);
+        
+      }
+      .headline {
+        @include dFlex($jc: flex-end, $g: 8px);
+        width: 100dvw;
+         @media screen and (min-width: 1050px) {
+          @include dFlex($g: 8px);
+          width: auto;
+        } 
 
-    .skillTxt {
-
-      text-align: right;
-      margin-top: -16px;
-      margin-bottom: 48px;
+        //max-width: $maxScreenWidth;
+        .bar {
+          width: 5vw;
+          height: 3px;
+          border: 3px;
+          background-color: rgba(255, 71, 71, 1);
+          @media screen and (min-width: 1050px) {
+            
+            width: 10dvw;
+          } 
+        }
+      }
     }
 
-    .getInTouchButton2 {
-      display: none;
-      width: 222px;
-      height: 65px;
+    .skillTxtCon {
+      width: 100%;
+      @include dFlex();
 
-      a {
-        width: 200px;
-        height: 58px;
-
-        &:hover {
-
-          width: 220px;
-          height: 63px;
-
+      //max-width: $maxScreenWidth;
+      .skillTxtInnerCon {
+        width: 90dvw;
+        @media screen and (min-width: 1050px) {
+          width: auto;
+          
         }
+        .skillTxt {
+
+          text-align: right;
+          margin-top: -16px;
+          margin-bottom: 48px;
+        }
+
+      }
+
+      .getInTouchButton2 {
+        display: none;
+        width: 222px;
+        height: 65px;
+
+        a {
+          width: 200px;
+          height: 58px;
+
+          &:hover {
+
+            width: 220px;
+            height: 63px;
+
+          }
+        }
+
       }
 
     }
-
-
-
   }
 
   .iconCon {
@@ -147,6 +185,7 @@ section {
   }
 
   .skillBgImg {
+
     position: absolute;
     width: 410px;
     height: 600px;

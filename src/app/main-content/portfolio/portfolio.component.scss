@@ -20,7 +20,7 @@ section {
     .headline {
       @include dFlex($g: 16px);
       width: 100dvw;
-
+      max-width: $maxScreenWidth; 
       .bar {
         height: 3px;
         border: 3px;

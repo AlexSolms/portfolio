@@ -50,19 +50,24 @@
 
   @include dFlex();
   position: relative;
-  margin-top: 109px;
+  margin-top: 130px;
   width: 100dvw;
   max-width: 100%;
   height: auto;
   max-height: 705px;
   flex-direction: column;
+ 
+  .iAmContent{
+    width: 100%;
+    max-width: $maxScreenWidth;
+    @include dFlex();
+    flex-direction: column;
+    @media screen and (min-width: 900px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
-  @media screen and (min-width: 900px) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .imgContainer {
+     .imgContainer {
     position: relative;
     width: 100%;
     @include dFlex();
@@ -105,7 +110,7 @@
 
     .iamTxt {
       position: relative;
-      margin: -55px 0 0 0;
+     // margin: -10px 0 0 0;
       display: flex;
       z-index: 15;
 
@@ -180,22 +185,27 @@
         color: #9747FF;
       }
 
-      .rotate {
-        transform: rotate(-90deg);
-        margin-right: -35px;
-
+      .iAmCon {
+        @include dFlex();
+        margin-bottom: -6px;
+        margin-right: -10px; 
         @media screen and (min-width: 1600px) {
-          margin-right: -96px;
-
+            margin-right: -50px;
+          }
+        .rotate {
+          transform: rotate(-90deg);         
         }
       }
     }
-.zIndex{
-  z-index: 16;
-}
-   
+
+    .zIndex {
+      z-index: 16;
+    }
+
   }
 
+  }
+ 
 }
 
 .socialContainer {

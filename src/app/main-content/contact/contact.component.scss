@@ -8,6 +8,7 @@ section {
   .headline {
     @include dFlex($g: 4px, $jc: flex-start);
     width: 100dvw;
+    max-width: $maxScreenWidth;
     margin-top: 1em;
     .bar {
       width: 5dvw;
@@ -21,7 +22,7 @@ section {
     @include dFlex();
     flex-direction: column;
     width: 90dvw;
-
+    max-width: $maxScreenWidth;
     .txt {
       max-width: 473px;
       margin: 0 8px;
