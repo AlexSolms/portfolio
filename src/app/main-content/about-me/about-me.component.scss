@@ -5,7 +5,9 @@ section {
   z-index: 15;
   @include dFlex();
 
-  flex-direction: column;
+  @media screen and (min-width: 940px) {
+    width: 100%;
+  }
 
   p {
     text-align: left;
@@ -18,24 +20,41 @@ section {
     visibility: hidden;
   }
 
-  .content {
-    @include dFlex($ai: flex-start);
-    flex-direction: column;
-    width: 90dvw;
-    max-width: $maxScreenWidth;
-    
-    .puzzleTxtCon {
-      @include dFlex($g: 16px);
+  .contentCon {
+    @media screen and (min-width: 940px) {
+      width: 90vw;
+      max-width: $maxScreenWidth;
+      @include dFlex();
+    }
 
-      .puzzleCon {
-        @include dFlex();
+    .txtContent {
+      @include dFlex($ai: flex-start);
+      flex-direction: column;
+      width: 90dvw;
+      
+
+      .puzzleTxtCon {
+        @include dFlex($g: 16px);
+
+        .puzzleCon {
+          @include dFlex();
+        }
+      }
+
+      .bulbTxtCon {
+        @include dFlex($g: 16px);
+
+        .bulbCon {
+          @include dFlex();
+        }
       }
     }
-    .bulbTxtCon {
-      @include dFlex($g: 16px);
 
-      .bulbCon {
-        @include dFlex();
+    .imgContent {
+      display: none;
+
+      @media screen and (min-width: 900px) {
+        display: flex;
       }
     }
   }
