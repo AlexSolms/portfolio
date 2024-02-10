@@ -5,7 +5,7 @@ section {
   z-index: 15;
   @include dFlex();
 
-  @media screen and (min-width: 940px) {
+  @media screen and (min-width: 900px) {
     width: 100%;
   }
 
@@ -21,17 +21,25 @@ section {
   }
 
   .contentCon {
-    @media screen and (min-width: 940px) {
-      width: 90vw;
+    @media screen and (min-width: 900px) {
+      width: 100vw;
       max-width: $maxScreenWidth;
-      @include dFlex();
+      @include dFlex($ai: flex-end, $g: 5vw);
+      
     }
 
     .txtContent {
       @include dFlex($ai: flex-start);
       flex-direction: column;
       width: 90dvw;
-      
+      @media screen and (min-width: 900px) {
+        padding-left: 5vw;
+        
+      }
+      @media screen and (min-width: 1440px) {
+        padding-left: 68px;
+      }
+
 
       .puzzleTxtCon {
         @include dFlex($g: 16px);
@@ -52,10 +60,24 @@ section {
 
     .imgContent {
       display: none;
+      //width: 453px;
 
       @media screen and (min-width: 900px) {
-        display: flex;
+        @include dFlex();
       }
+
+      .imgCircle {
+      img {
+          width: 400px;
+          border: 4px solid rgba(250, 121, 2, 1);
+          border-radius: 50%;
+        }
+      }
+      
+    }
+    .bar{
+      width: 5vw;
+      border: 2px solid rgba(250, 121, 2, 1);
     }
   }
 }
