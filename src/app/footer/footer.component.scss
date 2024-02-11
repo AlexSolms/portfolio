@@ -4,40 +4,77 @@ section {
   @include dFlex();
   flex-direction: column;
   width: 100%;
- 
+
 
   .impBar {
     width: 100%;
-    max-width: $maxScreenWidth;
+    //max-width: $maxScreenWidth;
     height: 4px;
     background-color: rgba(250, 121, 2, 1);
-    margin-block-end: 1em;
+    margin-block-end: 16px;
   }
 
-  p {
-    font-size: 23px;
-    line-height: 28px;
-    text-align: center;
-  }
-
-  .impSocials {
-    @include dFlex($jc: space-between);
-    height: 40px;
-    width: 174px;
+  .contentOuterContainer {
+    @include dFlex();
+    flex-direction: column;
+    width: 90dvw;
     max-width: $maxScreenWidth;
-    a {
-      width: 30px;
-      height: 30px;
+    @media screen and (min-width: 900px) {
+      align-items: flex-start;
+            
+    }
+    .content {
+      @include dFlex();
+      flex-direction: column;
+      @media screen and (min-width: 900px) {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        
+      }
+      h2{
+        margin: 14px 0;
+        @media screen and (min-width: 900px) {
+          margin: 0; 
+        }
+      }
+      p {
+        font-size: 23px;
+        line-height: 28px;
+        text-align: center;
+      }
+
+      .impSocials {
+        @include dFlex($jc: space-between);
+        height: 40px;
+        width: 174px;
+       // max-width: $maxScreenWidth;
+
+        a {
+          @include dFlex();
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+ 
+    .impCon {
+      margin: 16px 0;
+      @media screen and (min-width: 900px) {
+        margin-top: 0; 
+        line-height: 0;
+      }
+
+      a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+      }
     }
   }
 
-  .impCon{
-    margin: 16px 0;
-    a {
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-  }
-  }
-  
+
+
+
 }
