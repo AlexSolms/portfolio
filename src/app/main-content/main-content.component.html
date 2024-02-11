@@ -1,5 +1,11 @@
-<div class="allComponents">
 
+@if(showUpButton){
+    <div class="upBtn" id="idUpBtn" (click)="scrollToTop()">^</div>
+}
+
+<!-- <div class="upBtn" id="upBtn"><a href="#idIAm">&#8687;</a></div>  -->
+<div class="allComponents">
+    
     <app-iam></app-iam>
     <app-about-me></app-about-me>
     <app-skills></app-skills>

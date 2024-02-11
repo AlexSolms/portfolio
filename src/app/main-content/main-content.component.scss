@@ -1,4 +1,24 @@
 .allComponents {
     overflow-x: hidden;
+    
   }
-  
+   .upBtn{
+      position: -webkit-sticky;
+      position: sticky;
+      top:85vh;
+      left: 90vw;
+      z-index: 999;
+      width: 0px;
+      a{
+       
+        color: aliceblue;
+        font-size: 32px;
+        font-weight: 200;
+      }
+    } 
+
+    d-none{
+      display: none;
+    }
+    
+    
