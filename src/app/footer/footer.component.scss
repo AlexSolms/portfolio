@@ -19,49 +19,72 @@ section {
     flex-direction: column;
     width: 90dvw;
     max-width: $maxScreenWidth;
+
     @media screen and (min-width: 900px) {
       align-items: flex-start;
-            
+
     }
+
     .content {
       @include dFlex();
       flex-direction: column;
-      @media screen and (min-width: 900px) {
+
+      @media screen and (min-width: 600px) {
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        
+
       }
-      h2{
+
+      h2 {
         margin: 14px 0;
+
         @media screen and (min-width: 900px) {
-          margin: 0; 
+          margin: 0;
         }
       }
-      p {
-        font-size: 23px;
-        line-height: 28px;
-        text-align: center;
-      }
 
-      .impSocials {
-        @include dFlex($jc: space-between);
-        height: 40px;
-        width: 174px;
-       // max-width: $maxScreenWidth;
+      .socialCon {
+        @include dFlex();
+        flex-direction: column;
+        @media screen and (min-width: 600px) {
+          flex-direction: row;
+          gap: 16px;
+        }
+        p {
+          font-size: 23px;
+          line-height: 28px;
+          text-align: center;
+          @media screen and (min-width: 600px) {
+              width: 222px;
+          }
+          @media screen and (min-width: 700px) {
+            width: fit-content;
+        }
+        }
 
-        a {
-          @include dFlex();
-          width: 30px;
-          height: 30px;
+        .imgSocials {
+          @include dFlex($jc: space-between);
+          height: 40px;
+          width: 174px;
+          
+
+          a {
+            @include dFlex();
+            width: 30px;
+            height: 30px;
+          }
         }
       }
     }
- 
+
     .impCon {
       margin: 16px 0;
-      @media screen and (min-width: 900px) {
-        margin-top: 0; 
+
+      @media screen and (min-width: 600px) {
+        text-align: left;
+        width: 100%;
+        margin-top: 0;
         line-height: 0;
       }
 

@@ -1,24 +1,29 @@
+@import './../app.component.scss';
 .allComponents {
-    overflow-x: hidden;
-    
-  }
-   .upBtn{
-      position: -webkit-sticky;
-      position: sticky;
-      top:85vh;
-      left: 90vw;
-      z-index: 999;
-      width: 0px;
-      a{
-       
-        color: aliceblue;
-        font-size: 32px;
-        font-weight: 200;
-      }
-    } 
+  overflow-x: hidden;
 
-    d-none{
-      display: none;
-    }
-    
-    
+}
+
+.upBtn {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80vh;
+  left: 90vw;
+  z-index: 999;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.336);
+  font-size: 32px;
+  font-weight: 200;
+  @include dFlex();
+  padding-top: 2px;
+  color: rgba(255, 255, 255, 0.336);
+  transition: 0.3s;
+  cursor: pointer;
+  
+  &:hover{
+    border-color: rgba(250, 121, 2, 1);
+    color: rgba(250, 121, 2, 1);
+  }
+}

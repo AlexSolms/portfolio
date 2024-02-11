@@ -10,6 +10,20 @@ body {
   letter-spacing: 0em;
   
 }
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgb(138, 85, 85); 
+  
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(136, 38, 38); 
+  border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 71, 71, 1);
+}
 
 /* poppins-300 - latin */
 @font-face {
