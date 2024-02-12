@@ -4,25 +4,52 @@ section {
   @include dFlex();
   flex-direction: column;
   position: relative;
-  width: 100%;
+  width: 100dvw;
+  overflow: hidden;
+
   .myAnchor {
     display: block;
     position: absolute;
     top: -50px;
     visibility: hidden;
   }
+
+  .shapeContainer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: $maxScreenWidth;
+    .shape1 {
+      position: absolute;
+      height: 1000px;
+      bottom: -500px;
+      left: -200px;
+      z-index: -1;
+      width: 100%;
+      rotate: -27deg;
+      @media screen and (min-width: 400px) {
+        left: -300px;
+      }
+      @media screen and (min-width: 600px) {
+        left: -400px;
+      }
+      
+    }
+  }
+
   .headline {
     @include dFlex($g: 4px, $jc: flex-start);
     width: 100dvw;
     max-width: $maxScreenWidth;
     margin-top: 1em;
+
     .bar {
       width: 5dvw;
       max-width: 68px;
       border: 3px;
       height: 3px;
       background-color: rgba(255, 71, 71, 1);
-      
+
     }
   }
 
@@ -31,13 +58,14 @@ section {
     flex-direction: column;
     width: 90dvw;
     max-width: calc($maxScreenWidth - 136px);
-    @media screen and (min-width: 900px){
+
+    @media screen and (min-width: 900px) {
       flex-direction: row;
       align-items: flex-start;
       width: 90dvw;
       justify-content: space-between;
     }
- 
+
 
     .txt {
       max-width: 400px;
@@ -46,8 +74,9 @@ section {
       h3 {
         text-align: left;
         color: white;
-        @media screen and (min-width: 900px){
-        margin-top: 0;
+
+        @media screen and (min-width: 900px) {
+          margin-top: 0;
         }
       }
 
@@ -55,7 +84,7 @@ section {
         text-align: left;
       }
     }
-    
+
   }
 
 

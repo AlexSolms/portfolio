@@ -6,7 +6,7 @@
    fill="none"
    version="1.1"
    id="svg1"
-   sodipodi:docname="portfolioShape2.svg"
+   sodipodi:docname="portfolioShape3.svg"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -22,22 +22,23 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.8321392"
-     inkscape:cx="449.44403"
-     inkscape:cy="488.5"
+     inkscape:cx="449.44404"
+     inkscape:cy="487.29828"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="3032"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg1" />
+     inkscape:current-layer="g1" />
   <g
      filter="url(#filter0_f_413_3132)"
      id="g1"
-     transform="rotate(90,449.35658,488.47849)">
+     transform="matrix(1,0,0,-1,-5.9646607e-7,976.95697)">
     <path
-       d="m 103.245,93.7535 c -69.5329,0.7911 257.662,513.0925 257.662,513.0925 0,0 119.014,65.171 209.816,132.635 -30.814,69.494 10.489,169.856 82.142,137.459 50.277,-22.732 -6.019,-80.901 -82.142,-137.459 16.598,-37.433 54.12,-65.91 119.095,-59.858 185.599,17.289 91.489,-101.972 91.489,-101.972 0,0 -74.453,-66.808 -65.32,-134.466 l 0.081,-0.602 C 725.126,375.496 725.852,370.121 461.097,282.755 195.552,195.127 172.777,92.9625 103.245,93.7535 Z"
+       d="m 738.33053,795.07353 c -0.5635,59.90434 -365.47669,-221.98228 -365.47669,-221.98228 0,0 -46.42143,-102.53354 -94.47615,-180.76174 -49.5007,26.54703 -120.98873,-9.03654 -97.91229,-70.7674 16.19205,-43.3149 57.62593,5.18552 97.91229,70.7674 26.66359,-14.2996 46.94781,-46.62575 42.63696,-102.60334 -12.31498,-159.89819 72.63483,-78.82006 72.63483,-78.82006 0,0 47.58746,64.14312 95.78038,56.27481 l 0.4288,-0.0697 c 47.78619,-7.80369 51.61482,-8.42915 113.84577,219.66392 62.41758,228.77369 135.18954,248.39492 134.6261,308.29848 z"
        fill="#fa7902"
-       id="path1" />
+       id="path1"
+       style="stroke-width:0.783368" />
   </g>
   <defs
      id="defs1">

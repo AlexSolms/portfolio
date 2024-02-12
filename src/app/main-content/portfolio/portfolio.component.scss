@@ -12,6 +12,40 @@ section {
     top: -80px;
     visibility: hidden;
   }
+  .shapes{
+    @include dFlex($g: 24px);
+    flex-direction: column;
+    position: relative;
+    max-width: $maxScreenWidth; 
+  .shape1{
+    position: absolute;
+    left: -200px;
+    height: 400px;
+    bottom: 700px;
+    width: auto;
+    z-index: -1;
+    @media screen and (min-width: 600px) {
+      height: 500px;
+    }
+    @media screen and (min-width: 900px) {
+      left: -100px;
+      height: 500px;
+    }
+  }
+
+  .shape2{
+    position: absolute;
+    right: -350px;
+    height: 600px;
+    bottom: -200px;
+    width: auto;
+    z-index: -1;
+    @media screen and (min-width: 600px) {
+      right: -300px;
+    }
+    
+  }
+}
   p {
     text-align: center;
     width: 90vw;
