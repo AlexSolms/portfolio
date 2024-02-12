@@ -100,7 +100,7 @@ form {
       @include dFlex($g: 4px, $jc: space-between);
       width: 100%;
 
-      .fieldStyle{
+      .fieldStyle {
         background-color: rgba(20, 29, 47, 1);
         flex: 1;
         color: white;
@@ -113,30 +113,6 @@ form {
         &::placeholder {
           color: white;
         }
-         &:hover {
-          outline: 1px solid rgba(255, 71, 71, 1);
-        }
-
-        &:focus-visible {
-          outline: 1px solid rgba(255, 71, 71, 1);
-        }
-      }
-      input {
-        height: 40px;
-       /*  flex: 1;
-        background-color: rgba(20, 29, 47, 1);
-        color: white;
-        font-family: Poppins;
-        font-size: 16px;
-        line-height: 17px;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 71, 71, 1);*/
-        padding-left: 16px; 
-        padding-right: 50px;
-
-    /*     &::placeholder {
-          color: white;
-        }
 
         &:hover {
           outline: 1px solid rgba(255, 71, 71, 1);
@@ -144,34 +120,20 @@ form {
 
         &:focus-visible {
           outline: 1px solid rgba(255, 71, 71, 1);
-        } */
- }
+        }
+      }
+
+      input {
+        height: 40px;
+        padding-left: 16px;
+        padding-right: 50px;
+      }
 
       textarea {
         height: 298px;
-        /* background-color: rgba(20, 29, 47, 1);
-        flex: 1;
-        color: white;
-        font-size: 16px;
-        line-height: 17px;
-        font-family: Poppins;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 71, 71, 1); */
         padding: 16px 50px 16px 16px;
-
-      /*   &::placeholder {
-          color: white;
-        }
-         &:hover {
-          outline: 1px solid rgba(255, 71, 71, 1);
-        }
-
-        &:focus-visible {
-          outline: 1px solid rgba(255, 71, 71, 1);
-        } */
-        
-
       }
+
       .valid {
         border-color: rgba(112, 230, 28, 1);
 
@@ -197,6 +159,7 @@ form {
         }
 
       }
+
       .filledSign {
         top: 8px;
         right: 8px;

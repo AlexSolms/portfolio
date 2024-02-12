@@ -11,19 +11,11 @@
             @else if (name.valid && name.touched || name.valid){
             <img src="assets/img/icons/filledSign.svg" alt="filled" id="idFilledMessage" class="filledSign">
             }
-            <!-- <div class="signPlaceholder"> -->
-            <!-- <img src="assets/img/icons/filledSign.svg" alt="filled" id="idFilledName" class="filledSign">
-            <img src="assets/img/icons/warningSign.svg" alt="empty" id="idEmptyName" class="emptySign"> -->
-            <!-- </div> -->
         </div>
         <div class="requiredTxt">
             @if (!name.valid && name.touched){
             <span>Please add a name with at least 3 characters!</span>
-            <!-- {{test(false, "Name")}} -->
             }
-            <!--  @else if (name.valid && name.touched){ 
-                 {{test(true, "Name")}} 
-            }    -->
         </div>
     </div>
     <div class="inputFieldsCon">
@@ -38,20 +30,12 @@
             @else if (mail.valid && mail.touched || mail.valid){
             <img src="assets/img/icons/filledSign.svg" alt="filled" id="idFilledMessage" class="filledSign">
             }
-            <!-- <div class="signPlaceholder"> -->
-            <!--  <img src="assets/img/icons/filledSign.svg" alt="filled" id="idFilledEmail" class="filledSign">
-            <img src="assets/img/icons/warningSign.svg" alt="empty" id="idEmptyEmail" class="emptySign"> -->
-            <!-- </div> -->
         </div>
 
         <div class="requiredTxt">
             @if (!mail.valid && mail.touched){
             <span>Format for mail: name&#64;domain.xx</span>
-            <!-- {{test(false, "Email")}} -->
             }
-            <!-- @else if (mail.valid  && mail.touched){ 
-                 {{test(true, "Email")}} 
-            }-->
         </div>
 
     </div>
@@ -61,28 +45,18 @@
             <textarea class="fieldStyle" #message="ngModel" [(ngModel)]="contactData.message" name="message"
                 id="idMessage" placeholder="Your message" required
                 [ngClass]="{'invalid':!message.valid && message.touched,'valid':message.valid}"></textarea>
-            <!-- <div class="signPlaceholder"> -->
             @if (!message.valid && message.touched){
             <img src="assets/img/icons/warningSign.svg" alt="empty" id="idEmptyMessage" class="emptySign">
             }
             @else if (message.valid && message.touched || message.valid){
             <img src="assets/img/icons/filledSign.svg" alt="filled" id="idFilledMessage" class="filledSign">
             }
-
-
-            <!--  <img src="assets/img/icons/filledSign.svg" alt="filled" id="idFilledMessage" class="filledSign">
-            <img src="assets/img/icons/warningSign.svg" alt="empty" id="idEmptyMessage" class="emptySign"> -->
-            <!-- </div> -->
         </div>
 
         <div class="requiredTxt">
             @if (!message.valid && message.touched){
             <span>Your message is empty</span>
-            <!-- {{test(false, "Message")}} -->
             }
-            <!--   @else if (message.valid  && message.touched){ 
-                 {{test(true, "Message")}} 
-            }-->
         </div>
 
     </div>
