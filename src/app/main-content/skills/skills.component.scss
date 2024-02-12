@@ -2,11 +2,17 @@
 
 section {
   @include dFlex();
-  // flex-direction: column;
+  position: relative;
   width: 100%;
   height: 600px;
-  // position: relative;
- 
+  
+  .myAnchor {
+    display: block;
+    position: absolute;
+    top: -50px;
+    visibility: hidden;
+  }
+
   .content {
     @include dFlex();
     flex-direction: column;
@@ -64,7 +70,6 @@ section {
         flex-direction: column;
       }
 
-      //max-width: $maxScreenWidth;
       .skillTxtInnerCon {
         width: 90dvw;
 
@@ -149,11 +154,14 @@ section {
       .innerIconCon {
         @include dFlex($g: 8px);
         flex-direction: column;
-
+        
         img {
           height: 45px;
           width: 45px;
-
+          transition: 0.4s;
+          &:hover{
+            transform: scale(1.2);
+          }
           @media screen and (min-width: 800px) {
             height: 60px;
             width: 60px;
@@ -172,6 +180,7 @@ section {
             line-height: 19px;
           }
         }
+        
       }
 
 

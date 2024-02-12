@@ -79,8 +79,7 @@ h3 {
     transition: 0.3s;
 
     &:hover {
-      width: 113px;
-      height: 59px;
+      transform: scale(1.12);
       background-color: rgba(255, 71, 71, 1);
       font-size: 18px;
     }

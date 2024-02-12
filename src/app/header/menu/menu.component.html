@@ -1,18 +1,20 @@
-<!-- <p>menu works!</p> -->
+
 <div class="burger-menu" [class.active]="active" (click)="onBurgerClicked()">
 
 <div class="burger-container">
   <div class="burger-inner"></div>
 </div>
 </div>
-<div id="idMenuOpen" class="closedMenu">
+
+<div id="idMenuOpen" class="closedMenu" [ngClass]="{'openMenu': active}">
 
   <div class="menuLinkContainer">
 
-    <a href="#idAboutMe">About me</a>
-    <a href="#idMySkills">My skills</a>
-    <a href="#idPortfolio">Portfolio</a>
-    <a href="#idContact">Contact</a>
+    <a href="#idAboutMe" (click)="onBurgerClicked()">About me</a>
+    <a href="#idMySkills" (click)="onBurgerClicked()">My skills</a>
+    <a href="#idPortfolio" (click)="onBurgerClicked()">Portfolio</a>
+    <a href="#idContact" (click)="onBurgerClicked()">Contact</a>
   </div>
 
 </div>
+

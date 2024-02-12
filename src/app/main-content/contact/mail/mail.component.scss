@@ -185,20 +185,16 @@ form {
       background-color: rgb(138, 136, 136) !important;
 
       &:hover {
-        width: 175px !important;
-        height: 45px !important;
+        transform: scale(0.8);
         font-size: 90% !important;
         background-color: rgb(138, 136, 136) !important;
       }
     }
 
     .btnStettings {
-      width: 195px;
+      width: 195px !important;
       color: white;
 
-      &:hover {
-        width: 205px;
-      }
     }
   }
 }
