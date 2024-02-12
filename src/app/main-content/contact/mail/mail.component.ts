@@ -24,7 +24,7 @@ export class MailComponent {
   }
 
   checkboxState = false;
-
+  mailSend = false;
   mailTest = false;
 
   post = {
@@ -48,13 +48,28 @@ export class MailComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {
+            //this.mailSend = true;
+            this.popUpMailSendShow();
+           } //console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
     }
   }
 
+  popUpMailSendShow() {
+    this.mailSend = true;
+    document.body.style.overflow = 'hidden';
+  
+ 
+  }
+  popUpMailSendhide() {
+    this.mailSend = false;
+    
+   document.body.style.overflow = 'auto'; 
+ 
+  }
 
 }
 

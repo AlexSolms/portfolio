@@ -79,4 +79,15 @@
     </div>
     }
 
+    @if(mailSend){
+    <div class="mailSendContainer">
+        <div class="innerCon">
+            <p>Mail was send! <br><span> Thank you <br> for contacting me.</span></p>
+            <div class="btnFrame">
+            <div class="btnStettings"  (click)="popUpMailSendhide()">Close</div>
+        </div>
+        </div>
+    </div>
+    }
+
 </form>
