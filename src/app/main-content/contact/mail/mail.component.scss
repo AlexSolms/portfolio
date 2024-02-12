@@ -100,20 +100,41 @@ form {
       @include dFlex($g: 4px, $jc: space-between);
       width: 100%;
 
+      .fieldStyle{
+        background-color: rgba(20, 29, 47, 1);
+        flex: 1;
+        color: white;
+        font-size: 16px;
+        line-height: 17px;
+        font-family: Poppins;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 71, 71, 1);
+
+        &::placeholder {
+          color: white;
+        }
+         &:hover {
+          outline: 1px solid rgba(255, 71, 71, 1);
+        }
+
+        &:focus-visible {
+          outline: 1px solid rgba(255, 71, 71, 1);
+        }
+      }
       input {
         height: 40px;
-        flex: 1;
+       /*  flex: 1;
         background-color: rgba(20, 29, 47, 1);
         color: white;
         font-family: Poppins;
         font-size: 16px;
         line-height: 17px;
         border-radius: 10px;
-        border: 1px solid rgba(255, 71, 71, 1);
-        padding-left: 16px;
+        border: 1px solid rgba(255, 71, 71, 1);*/
+        padding-left: 16px; 
         padding-right: 50px;
 
-        &::placeholder {
+    /*     &::placeholder {
           color: white;
         }
 
@@ -123,9 +144,34 @@ form {
 
         &:focus-visible {
           outline: 1px solid rgba(255, 71, 71, 1);
-        }
+        } */
  }
 
+      textarea {
+        height: 298px;
+        /* background-color: rgba(20, 29, 47, 1);
+        flex: 1;
+        color: white;
+        font-size: 16px;
+        line-height: 17px;
+        font-family: Poppins;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 71, 71, 1); */
+        padding: 16px 50px 16px 16px;
+
+      /*   &::placeholder {
+          color: white;
+        }
+         &:hover {
+          outline: 1px solid rgba(255, 71, 71, 1);
+        }
+
+        &:focus-visible {
+          outline: 1px solid rgba(255, 71, 71, 1);
+        } */
+        
+
+      }
       .valid {
         border-color: rgba(112, 230, 28, 1);
 
@@ -151,60 +197,18 @@ form {
         }
 
       }
-
-      textarea {
-        height: 298px;
-        background-color: rgba(20, 29, 47, 1);
-        flex: 1;
-        border: none;
-        color: white;
-        font-size: 16px;
-        line-height: 17px;
-        font-family: Poppins;
-        border-radius: 10px;
-        border: 1px solid rgba(255, 71, 71, 1);
-        padding: 16px 50px 16px 16px;
-
-        &::placeholder {
-          color: white;
-        }
-
-        &:hover:invalid {
-          outline: 1px solid rgba(255, 71, 71, 1);
-        }
-
-        &:hover:valid {
-          outline: 1px solid rgba(112, 230, 28, 1);
-        }
-
-        &:focus-visible:valid {
-          outline: 1px solid rgba(112, 230, 28, 1);
-        }
-
-        &:focus-visible:invalid {
-          outline: 1px solid rgba(255, 71, 71, 1);
-        }
-
-        &:valid {
-          border: 1px solid rgba(112, 230, 28, 1)
-        }
-
-        /*  */
-
-      }
-
       .filledSign {
         top: 8px;
         right: 8px;
         position: absolute;
-        display: none;
+        display: block;
       }
 
       .emptySign {
         top: 8px;
         right: 8px;
         position: absolute;
-        display: none;
+        display: block;
       }
     }
   }
