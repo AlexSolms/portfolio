@@ -125,7 +125,8 @@ section {
       @include dFlex($g: 8px);
       flex-direction: column;
       height: 100%;
-
+      margin: -60px 0 0 0;
+      padding-right: 5vw;
       @media screen and (min-width: 1700px) {
         min-width: calc(100% - 416px);
       }
@@ -135,20 +136,10 @@ section {
         display: flex;
         z-index: 15;
 
-        @media screen and (min-width: 450px) {
-          margin: -20px 0 0 0;
-
-        }
-
-        @media screen and (min-width: 500px) {
-          margin: -40px 0 0 0;
-        }
-
         @media screen and (min-width: 800px) {
-          margin: -60px 0 0 0;
           width: max-content;
-          margin-right: 5vw;
-        }
+          
+        } 
 
         .nameTitle {
           @include dFlex($ai: normal);
@@ -231,6 +222,22 @@ section {
 
       .btnFrame {
         z-index: 16;
+
+        @media screen and (min-width: 450px) {
+          width: 200px;
+          height: 70px;
+
+          .btnStettings {
+            width: 170px;
+            height: 65px;
+            font-size: 20px;
+
+            &:hover {
+              font-size: 22px;
+            }
+          }
+
+        }
 
         @media screen and (min-width: 800px) {
           width: 230px;
