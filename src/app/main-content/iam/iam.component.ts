@@ -13,8 +13,7 @@ export class IamComponent implements OnInit{
   data = inject(GlobalvarService);
 
   ngOnInit(){
-   // AOS.init();
-    AOS.init({disable: 'mobile'});//AOS - 2
-    AOS.refresh();
+    AOS.init();
+    
   }
 }
