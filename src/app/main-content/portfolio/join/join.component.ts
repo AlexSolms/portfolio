@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { GlobalvarService } from '../../../globalvar.service';
 
 @Component({
   selector: 'app-join',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './join.component.scss'
 })
 export class JoinComponent {
-
+  data = inject(GlobalvarService);
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,inject } from '@angular/core';
+import { GlobalvarService } from '../../../globalvar.service';
 
 @Component({
   selector: 'app-da-bubble',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './da-bubble.component.scss'
 })
 export class DaBubbleComponent {
-
+  data = inject(GlobalvarService);
 }

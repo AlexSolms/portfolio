@@ -10,7 +10,7 @@ import { GlobalvarService } from '../../globalvar.service';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent implements OnInit  {
-  imgPath:string= 'assets/img/icons/united-28519.svg';
+  
   data = inject(GlobalvarService);
   active:boolean = false;
 

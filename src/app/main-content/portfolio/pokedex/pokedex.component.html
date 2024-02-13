@@ -5,10 +5,17 @@
     <div class="infoContainer">
         <h3>Pokedex</h3>
         <p class="skillset">JavaScript | HTML | CSS | Api</p>
-        <p class="description">Based on the PokéAPI a simple library that provides and catalogues pokemon information. </p>
+        <p class="description">
+            @if(data.translate){
+            Pokedex basierend auf der PokéAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und
+            katalogisiert.
+            }@else{
+            Based on the PokéAPI a simple library that provides and catalogues pokemon information.
+            }</p>
         <div class="btnContainer">
             <div class="btnFrame">
-                <a class="btnStettings testbtn" href="https://pokedex.alexander-solms.de/index.html" target="_blank">Live test</a>
+                <a class="btnStettings testbtn" href="https://pokedex.alexander-solms.de/index.html"
+                    target="_blank">@if(data.translate){Livetest}@else{Live test}</a>
             </div>
             <div class="btnFrame">
                 <a class="btnStettings gitBtn" href="https://github.com/AlexSolms/Pokedex" target="_blank">GitHub</a>

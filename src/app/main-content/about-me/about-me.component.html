@@ -1,39 +1,67 @@
 <section>
     <div class="myAnchor" id="idAboutMe"></div>
 
-<div class="contentCon">
-    <div class="txtContent">
-        <div class="headtxtCon">
-            <h2>About me</h2>
-            <p>I am a passionate Front-End Developer based in Leipzig. Over the past six months, I've dedicated myself
-                to honing my skills and am eager to contribute my acquired knowledge within a collaborative team
-                environment.</p>
-        </div>
-        <div class="puzzleTxtCon">
-            <div class="puzzleCon">
-                <img src="assets/img/icons/puzzle.svg" alt="">
+    <div class="contentCon">
+        <div class="txtContent">
+            <div class="headtxtCon">
+                <h2>@if(data.translate){Über mich}@else{About me}</h2>
+                <p>
+                    @if(data.translate){
+                    Ich bin ein leidenschaftlicher Front-End-Entwickler mit Sitz in Leipzig. In den letzten sechs
+                    Monaten habe ich mich der Weiterentwicklung meiner Fähigkeiten gewidmet und freue mich darauf, mein
+                    erworbenes Wissen in einer kollaborativen Teeumgebung einzubringen.
+                    }@else{
+                    I am a passionate Front-End Developer based in Leipzig. Over the past six months, I've dedicated
+                    myself to honing my skills and am eager to contribute my acquired knowledge within a collaborative
+                    team
+                    environment.
+                    }
+                </p>
             </div>
-            <p>Continuous skill improvement is my top priority. Actively seeking new challenges, I aim to deepen my
-                expertise in HTML, SCSS, Angular, Material Design, Bootstrap, and Firebase.</p>
-        </div>
-        <div class="bulbTxtCon">
-            <div class="bulbCon">
-                <img src="assets/img/icons/bulb.svg" alt="">
+            <div class="puzzleTxtCon">
+                <div class="puzzleCon">
+                    <img src="assets/img/icons/puzzle.svg" alt="">
+                </div>
+                <p>
+                    @if(data.translate){
+                    Die kontinuierliche Verbesserung meiner Fähigkeiten hat für mich oberste Priorität. Ich suche aktiv
+                    nach neuen Herausforderungen und möchte mein Fachwissen in HTML, SCSS, Angular, Material Design,
+                    Bootstrap und Firebase vertiefen.
+                    }@else{
+                    Continuous skill improvement is my top priority. Actively seeking new challenges, I aim to deepen my
+                    expertise in HTML, SCSS, Angular, Material Design, Bootstrap, and Firebase.
+                    }
+                </p>
             </div>
-            <p>With a solid grasp of HTML, SCSS, and hands-on experience in Angular, Material Design, Bootstrap, and
-                Firebase, I am equipped to craft innovative Front-End solutions. My goal is to make a meaningful impact
-                by integrating my skills seamlessly into a team.</p>
-        </div>
-    </div>
+            <div class="bulbTxtCon">
+                <div class="bulbCon">
+                    <img src="assets/img/icons/bulb.svg" alt="">
+                </div>
+                <p> @if(data.translate){
 
-    <div class="imgContent">
-        <div class="imgCircle">
-            <img src="assets/img/me_face.png" alt="">
-        </div>
-      <div class="bar">
+                    Durch meine umfassenden Kenntnisse in HTML, SCSS sowie meine praktische Erfahrung in Angular,
+                    Material Design, Bootstrap und Firebase vermag ich innovative Front-End-Lösungen zu gestalten. Mein
+                    Bestreben besteht darin, durch die Integration meiner Fähigkeiten in ein Team, eine nachhaltige
+                    Wirkung zu erzielen.
+                    }@else{
+                    With a solid grasp of HTML, SCSS, and hands-on experience in Angular, Material Design, Bootstrap,
+                    and Firebase, I am equipped to craft innovative Front-End solutions. My goal is to make a meaningful
+                    impact by integrating my skills seamlessly into a team.
+                    }
 
-        </div>  
+
+                </p>
+            </div>
+        </div>
+
+        <div class="imgContent">
+            <div class="imgCircle">
+                <img src="assets/img/me_face.png" alt="">
+            </div>
+            <div class="bar">
+
+            </div>
+        </div>
+
     </div>
-    
-</div>
 </section>

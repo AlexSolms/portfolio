@@ -5,10 +5,16 @@
     <div class="infoContainer">
         <h3>Simple CRM</h3>
         <p class="skillset">Angular | Firebase</p>
-        <p class="description">Placeholder for a very Simple Customer Relationship Management system working with CRUD functionality.</p>
+        <p class="description">
+            @if(data.translate){
+            Platzhalter für ein Folgeprojekt, wie ein einfaches CMR mit CRUD-Funktionalität.
+            }@else{
+            Placeholder for a very simple Customer Relationship Management system working with CRUD functionality.
+            }</p>
         <div class="btnContainer">
             <div class="btnFrame">
-                <a class="btnStettings testbtn" href="https://simple-crm.alexander-solms.de/" target="_blank">Live test</a>
+                <a class="btnStettings testbtn" href="https://simple-crm.alexander-solms.de/" target="_blank">
+                    @if(data.translate){Livetest}@else{Live test}</a>
             </div>
             <div class="btnFrame">
                 <a class="btnStettings gitBtn" href="https://simple-crm.alexander-solms.de/" target="_blank">GitHub</a>

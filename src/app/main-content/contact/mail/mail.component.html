@@ -3,7 +3,7 @@
         <div class="inputField">
             <label for="idName"></label>
             <input class="fieldStyle" #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" id="idName"
-                placeholder="Your name please" required
+                [placeholder]="data.translate ? 'Ihr Name bitte' : 'Your name please'" required
                 [ngClass]="{'invalid':!name.valid && name.touched,'valid':name.valid}" minlength="3" maxlength="30">
             @if (!name.valid && name.touched){
             <img src="assets/img/icons/warningSign.svg" alt="empty" id="idEmptyMessage" class="emptySign">
@@ -14,7 +14,13 @@
         </div>
         <div class="requiredTxt">
             @if (!name.valid && name.touched){
-            <span>Please add a name with at least 3 characters!</span>
+            <span>
+                @if(data.translate){
+                Bitte mind. 3 Buchstaben für den Namen verwenden!
+                } @else {
+                Please add a name with at least 3 characters!
+                }
+            </span>
             }
         </div>
     </div>
@@ -23,7 +29,8 @@
             <label for="idEmail"></label>
             <input class="fieldStyle" #mail="ngModel" [(ngModel)]="contactData.email" type="email" name="email"
                 id="idEmail" required [ngClass]="{'invalid':!mail.valid && mail.touched,'valid':mail.valid}"
-                placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                [placeholder]="data.translate ? 'Ihre E-Mail bitte' : 'Your email'"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
             @if (!mail.valid && mail.touched){
             <img src="assets/img/icons/warningSign.svg" alt="empty" id="idEmptyMessage" class="emptySign">
             }
@@ -34,7 +41,13 @@
 
         <div class="requiredTxt">
             @if (!mail.valid && mail.touched){
-            <span>Format for mail: name&#64;domain.xx</span>
+            <span>
+                @if(data.translate){
+                Format für die E-Mail: name&#64;domain.xx
+                } @else {
+                Format for mail: name&#64;domain.xx
+                }
+            </span>
             }
         </div>
 
@@ -43,7 +56,7 @@
         <div class="inputField">
             <label for="idMessage"></label>
             <textarea class="fieldStyle" #message="ngModel" [(ngModel)]="contactData.message" name="message"
-                id="idMessage" placeholder="Your message" required
+                id="idMessage" [placeholder]="data.translate ? 'Ihre Nachricht':'Your message'" required
                 [ngClass]="{'invalid':!message.valid && message.touched,'valid':message.valid}"></textarea>
             @if (!message.valid && message.touched){
             <img src="assets/img/icons/warningSign.svg" alt="empty" id="idEmptyMessage" class="emptySign">
@@ -55,7 +68,11 @@
 
         <div class="requiredTxt">
             @if (!message.valid && message.touched){
-            <span>Your message is empty</span>
+            <span> @if(data.translate){
+                Noch ist keine Nachricht vorhanden.
+                } @else {
+                Your message is empty
+                }</span>
             }
         </div>
 
@@ -65,27 +82,50 @@
             <input [(ngModel)]="checkboxState" type="checkbox" name="chkbox" id="idChkBox" required>
             <span class="customChkBox"></span>
         </label>
-        <span>
-            I've read the <a href="imprint">privacy policy</a> and agree to the processing of my data as
-            outlined.</span>
+        <span> 
+            @if(data.translate){
+                Ich habe die <a href="imprint">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten, wie beschrieben, zu.
+            } @else {
+                I've read the <a href="imprint">privacy policy</a> and agree to the processing of my data as
+                outlined.
+            }
+            </span>
     </div>
     @if (!contactForm.valid || !checkboxState) {
     <div class="btnFrame">
-        <button class="btnStettings disabledBtn" type="submit" disabled>Send message :&#41;</button>
+        <button class="btnStettings disabledBtn" type="submit" disabled> @if(data.translate){
+            Nachricht senden :&#41;
+            }@else{
+                Send message :&#41;
+            }</button>
     </div>
     }@else if(contactForm.valid && checkboxState){
     <div class="btnFrame">
-        <button class="btnStettings" type="submit">Send message :&#41;</button>
+        <button class="btnStettings" type="submit">
+            @if(data.translate){
+            Nachricht senden :&#41;
+            }@else{
+                Send message :&#41;
+            }
+        </button>
     </div>
     }
 
     @if(mailSend){
     <div class="mailSendContainer">
         <div class="innerCon">
-            <p>Mail was send! <br><span> Thank you <br> for contacting me.</span></p>
-            <div class="btnFrame">
-            <div class="btnStettings"  (click)="popUpMailSendhide()">Close</div>
-        </div>
+            @if(data.translate){
+                <p>E-Mail wurde versendet! <br><span> Danke <br> für Ihre Nachricht.</span></p>
+                <div class="btnFrame">
+                    <div class="btnStettings" (click)="popUpMailSendhide()">Schließen</div>
+                </div>
+                }@else{
+                    <p>Mail was send! <br><span> Thank you <br> for contacting me.</span></p>
+                    <div class="btnFrame">
+                        <div class="btnStettings" (click)="popUpMailSendhide()">Close</div>
+                    </div>
+                }
+           
         </div>
     </div>
     }

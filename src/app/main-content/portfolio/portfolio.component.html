@@ -1,24 +1,29 @@
 <section>
   <div class="myAnchor" id="idPortfolio"></div>
-<div class="shapes">
-  <img class="shape1" src="assets/img/shapes/portfolioShape1.svg" alt="">
-  <img class="shape2" src="assets/img/shapes/portfolioShape2.svg" alt="">
-  <div class="hedlineCon">
-    <div class="headline">
-      <div class="left">
-        <div class="placeholder"></div>
-        <div class="barLeft bar"></div>
+  <div class="shapes">
+    <img class="shape1" src="assets/img/shapes/portfolioShape1.svg" alt="">
+    <img class="shape2" src="assets/img/shapes/portfolioShape2.svg" alt="">
+    <div class="hedlineCon">
+      <div class="headline">
+        <div class="left">
+          <div class="placeholder"></div>
+          <div class="barLeft bar"></div>
+        </div>
+        <h2>Portfolio</h2>
+        <div class="barRight bar">
+        </div>
       </div>
-      <h2>Portfolio</h2>
-      <div class="barRight bar">
-      </div>
+      <p>
+        @if(data.translate){
+          Diese Seite ist eine Auswahl meiner Arbeiten - probieren Sie sie gerne aus.
+        }@else{
+          This page is a sample of my work - please feel free to try them out.
+        }</p>
     </div>
-    <p>This page is a sample of my work - please feel free to try them out.</p>
-  </div>
-  <app-join></app-join>
-  <app-el-pollo-loco></app-el-pollo-loco>
-  <app-da-bubble></app-da-bubble>
-  <app-pokedex></app-pokedex>
+    <app-join></app-join>
+    <app-el-pollo-loco></app-el-pollo-loco>
+    <app-da-bubble></app-da-bubble>
+    <app-pokedex></app-pokedex>
 
-</div>
+  </div>
 </section>

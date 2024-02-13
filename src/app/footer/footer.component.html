@@ -12,7 +12,13 @@
             </div>
         </div>
         </div>
-        <div class="impCon"><a href="imprint">Imprint</a></div>
+        <div class="impCon">
+            @if (data.translate) {
+            <a href="imprint">Impressum</a>
+        }@else {
+            <a href="imprint">Imprint</a>
+        }
+        </div>
     </div>
 
      <!--  -->

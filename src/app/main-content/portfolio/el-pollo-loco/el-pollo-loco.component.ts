@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { GlobalvarService } from '../../../globalvar.service';
 
 @Component({
   selector: 'app-el-pollo-loco',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './el-pollo-loco.component.scss'
 })
 export class ElPolloLocoComponent {
-
+  data = inject(GlobalvarService);
 }

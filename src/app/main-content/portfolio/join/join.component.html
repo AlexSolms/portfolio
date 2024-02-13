@@ -5,11 +5,18 @@
     <div class="infoContainer">
         <h3>Join</h3>
         <p class="skillset">HTML | CSS | JavaScript</p>
-        <p class="description">Task manager inspired by the Kanban System. Create and organize tasks using drag and drop
-            functions, assign users and categories. </p>
+        <p class="description">
+            @if(data.translate){
+            Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von
+            Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.
+            }@else{
+            Task manager inspired by the Kanban System. Create and organize tasks using drag and drop
+            functions, assign users and categories.
+            }</p>
         <div class="btnContainer">
             <div class="btnFrame">
-                <a class="btnStettings testbtn" href="https://join.alexander-solms.de/html/login.html" target="_blank">Live test</a>
+                <a class="btnStettings testbtn" href="https://join.alexander-solms.de/html/login.html"
+                    target="_blank">@if(data.translate){Livetest}@else{Live test}</a>
             </div>
             <div class="btnFrame">
                 <a class="btnStettings gitBtn" href="https://github.com/AlexSolms/join" target="_blank">GitHub</a>

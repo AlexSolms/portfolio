@@ -3,14 +3,21 @@
     
     <div class="headline">
         <div class="bar"></div>
-        <h2>Contact</h2>
+        <h2>@if(data.translate){Kontakt}@else{Contact}</h2>
     </div>
     <div class="content">
         <div class="txt">
-            <h3>Got a problem to solve?</h3>
+            @if(data.translate){
+                <h3>Sie haben ein Problem zu lösen?</h3>
+                <p>Kontaktieren sie mich über dieses Formular.<br> Ich bin daran interessiert, Ihnen zuzuhören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.</p>
+                <p>Sie brauchen einen Frontend-Entwickler? <b>Kontaktieren sie mich!</b></p>
+            }@else{
+                <h3>Got a problem to solve?</h3>
             <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
                 projects with my work.</p>
             <p>Need a Frontend developer? <b>Contact me!</b></p>
+        }
+            
         </div>
         <app-mail></app-mail>
     </div>

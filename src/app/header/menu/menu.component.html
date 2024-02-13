@@ -12,11 +12,17 @@
   <div id="idMenuOpen" class="closedMenu" [ngClass]="{'openMenu': active}">
 
     <div class="menuLinkContainer">
-
-      <a href="#idAboutMe" (click)="onBurgerClicked()">About me</a>
+      @if(data.translate){
+      <a href="#idAboutMe" (click)="onBurgerClicked()">Über mich</a>
+      <a href="#idMySkills" (click)="onBurgerClicked()">Fähigkeiten</a>
+      <a href="#idPortfolio" (click)="onBurgerClicked()">Portfolio</a>
+      <a href="#idContact" (click)="onBurgerClicked()">Kontakt</a>
+      } @else {
+        <a href="#idAboutMe" (click)="onBurgerClicked()">About me</a>
       <a href="#idMySkills" (click)="onBurgerClicked()">My skills</a>
       <a href="#idPortfolio" (click)="onBurgerClicked()">Portfolio</a>
       <a href="#idContact" (click)="onBurgerClicked()">Contact</a>
+      }
     </div>
 
   </div>

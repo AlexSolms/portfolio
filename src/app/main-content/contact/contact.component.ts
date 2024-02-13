@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MailComponent } from './mail/mail.component';
+import { GlobalvarService } from '../../globalvar.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,6 +10,6 @@ import { MailComponent } from './mail/mail.component';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-
+  data = inject(GlobalvarService);
 }
 

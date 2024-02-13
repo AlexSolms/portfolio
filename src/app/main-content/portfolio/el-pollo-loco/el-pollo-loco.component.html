@@ -5,10 +5,15 @@
     <div class="infoContainer">
         <h3>El Pollo Loco</h3>
         <p class="skillset">HTML | CSS | JavaScript</p>
-        <p class="description">Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen. </p>
+        <p class="description">
+            @if(data.translate){
+                Jump'n'Run und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.
+            }@else{
+                Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen. 
+            }</p>
         <div class="btnContainer">
             <div class="btnFrame">
-                <a class="btnStettings testbtn" href="http://el-pollo-loco.alexander-solms.de/" target="_blank">Live test</a>
+                <a class="btnStettings testbtn" href="http://el-pollo-loco.alexander-solms.de/" target="_blank">@if(data.translate){Livetest}@else{Live test}</a>
             </div>
             <div class="btnFrame">
                 <a class="btnStettings gitBtn" href="https://github.com/AlexSolms/Game002"  target="_blank">GitHub</a>

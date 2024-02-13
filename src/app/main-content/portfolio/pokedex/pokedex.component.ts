@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,inject } from '@angular/core';
+import { GlobalvarService } from '../../../globalvar.service';
 
 @Component({
   selector: 'app-pokedex',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './pokedex.component.scss'
 })
 export class PokedexComponent {
-
+  data = inject(GlobalvarService);
 }

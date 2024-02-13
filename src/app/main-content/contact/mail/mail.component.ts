@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { GlobalvarService } from '../../../globalvar.service';
 
 @Component({
   selector: 'app-mail',
@@ -14,7 +15,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './mail.component.scss'
 })
 export class MailComponent {
-
+  data = inject(GlobalvarService);
   http = inject(HttpClient);
 
   contactData = {

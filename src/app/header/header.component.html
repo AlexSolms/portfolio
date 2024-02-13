@@ -8,9 +8,15 @@
                         <div class="flagcon">
                                 <img src="{{data.imgPath}}" alt="" (click)="data.fnTranslate()">
                         </div>
+                        @if(data.translate){
+                        <a href="#idAboutMe">Über mich</a>
+                        <a href="#idMySkills">Fähigkeiten</a>
+                        <a href="#idPortfolio">Portfolio</a>
+                        }@else {
                         <a href="#idAboutMe">About me</a>
                         <a href="#idMySkills">Skills</a>
                         <a href="#idPortfolio">Portfolio</a>
+                        }
                 </div>
                 <app-menu></app-menu>
         </div>
