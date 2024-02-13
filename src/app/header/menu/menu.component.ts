@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, inject} from '@angular/core';
+import { GlobalvarService } from '../../globalvar.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +10,8 @@ import { Component, OnInit} from '@angular/core';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent implements OnInit  {
-
+  imgPath:string= 'assets/img/icons/united-28519.svg';
+  data = inject(GlobalvarService);
   active:boolean = false;
 
   ngOnInit() {

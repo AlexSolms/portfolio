@@ -1,13 +1,26 @@
 @import './../app.component.scss';
+
 .allComponents {
   overflow-x: hidden;
+  position: relative;
+  width: 100%;
+
+  .positionAb {
+    position: absolute;
+    bottom: 40px;
+  }
 
 }
 
-.upBtn {
+.positionSt {
+
   position: -webkit-sticky;
   position: sticky;
   top: 90vh;
+}
+
+.upBtn {
+
   left: 90vw;
   z-index: 98;
   width: 34px;
@@ -21,8 +34,8 @@
   color: rgba(255, 255, 255, 0.336);
   transition: 0.3s;
   cursor: pointer;
-  
-  &:hover{
+
+  &:hover {
     border-color: rgba(250, 121, 2, 1);
     color: rgba(250, 121, 2, 1);
   }

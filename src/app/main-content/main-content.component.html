@@ -1,15 +1,14 @@
 
-@if(showUpButton){
-    <div class="upBtn" id="idUpBtn" (click)="scrollToTop()">^</div>
-}
+    @if(showUpButton && !data.footerInView){
+        <div class="upBtn positionSt" id="idUpBtn" (click)="scrollToTop()">^</div>
+    }
 
 <!-- <div class="upBtn" id="upBtn"><a href="#idIAm">&#8687;</a></div>  -->
-<div class="allComponents">
-    
+<div class="allComponents">   
     <app-iam></app-iam>
     <app-about-me></app-about-me>
     <app-skills></app-skills>
     <app-portfolio></app-portfolio>
     <app-contact></app-contact>
-
+    <div *ngIf="data.footerInView"  class="upBtn positionAb" id="idUpBtn" (click)="scrollToTop()">^</div>
 </div>

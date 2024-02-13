@@ -1,6 +1,19 @@
+@import './../../app.component.scss';
+
 $burgerWidth: 24px;
 $burgerBarHeight: 1px;
 $burgerBarColor: rgba(255, 255, 255, 1);
+
+section{
+  @include dFlex($g:16px);
+  .flagcon {
+    @include dFlex();
+
+    img {
+        width: 30px;
+    }
+}
+}
 
 .burger-menu {
   position: relative;

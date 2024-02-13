@@ -5,7 +5,7 @@ section {
     position: fixed;
     margin: 0 32px 0 0;
     height: 109px;
-     width: 100%;
+    width: 100%;
     top: 0;
     background-color: rgba(20, 29, 47, 1);
     z-index: 99;
@@ -17,12 +17,13 @@ section {
         @include dFlex($jc: space-between);
         width: 90dvw;
         max-width: $maxScreenWidth;
+
         .menuDesktop {
             @include dFlex($jc: space-between, $g: 32px);
             display: none;
         }
 
-        @media screen and (min-width: 550px) {
+        @media screen and (min-width: 600px) {
             app-menu {
                 display: none;
             }
@@ -37,7 +38,14 @@ section {
                     line-height: 28px;
                 }
             }
+        }
+    }
 
+    .flagcon {
+        @include dFlex();
+
+        img {
+            width: 50px;
         }
     }
 }
