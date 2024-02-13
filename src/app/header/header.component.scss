@@ -10,18 +10,13 @@ section {
     background-color: rgba(20, 29, 47, 1);
     z-index: 99;
 
-    /* span {
-        margin-left: 25px;
-    } */
+
     .content {
         @include dFlex($jc: space-between);
         width: 90dvw;
         max-width: $maxScreenWidth;
 
-        .menuDesktop {
-            @include dFlex($jc: space-between, $g: 32px);
-            display: none;
-        }
+
 
         @media screen and (min-width: 690px) {
             app-menu {
@@ -31,21 +26,57 @@ section {
             .menuDesktop {
                 @include dFlex($jc: space-between, $g: 32px);
                 display: flex !important;
-
-                a {
-                    font-size: 23px;
-                    font-weight: 400;
-                    line-height: 28px;
-                }
             }
         }
     }
 
     .flagcon {
         @include dFlex();
+        cursor: pointer;
 
         img {
             width: 50px;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
+    }
+}
+
+.menuDesktop {
+    @include dFlex($jc: space-between, $g: 32px);
+    display: none;
+
+    a {
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 28px;
+        position: relative;
+        color: white;
+        text-decoration: none;
+        transition: 0.7s;
+    }
+
+    a:hover {
+        color: rgb(136, 38, 38);
+    }
+
+    a::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(136, 38, 38);
+        transform: scaleX(0);
+        transition: transform 0.6s ease;
+    }
+
+    a:hover::before {
+        transform: scaleX(1);
     }
 }

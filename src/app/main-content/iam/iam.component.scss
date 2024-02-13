@@ -304,6 +304,14 @@ section {
 
       .socialIcons {
         @include dFlex($g: 42px);
+        img{
+          width: 30px;
+          height: 30px;
+          transition: 0.3s;
+          &:hover{
+            transform: scale(1.15);
+          }
+        }
       }
 
       .mail {
@@ -316,10 +324,10 @@ section {
           color: white;
           text-decoration: none;
           display: none;
-
+         
           @media screen and (min-width: 870px) {
             display: block;
-
+            
           }
         }
       }

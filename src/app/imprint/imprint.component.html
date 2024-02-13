@@ -1,19 +1,82 @@
 <section>
     <div class="content">
-        
-        
-            <div class="address"><h3 class="subtitle">Imprint</h3>
-                Alexander Solms<br>
-                Lößniger Straße 15<br>
-                04275 Leipzig<br>
-                Phone: 015679 234861<br>
-                Email: <a class="link" href='mailto:mail@alexander-solms.de'>mail&#64;alexander-solms.de</a>
-            </div>
-        
+
+        @if(data.translate){
+        <div class="address">
+            <h3 class="subtitle">Impressum</h3>
+            Alexander Solms<br>
+            Lößniger Straße 15<br>
+            04275 Leipzig<br>
+            Tel: 015679 234861<br>
+            Email: <a class="link" href='mailto:mail@alexander-solms.de'>mail&#64;alexander-solms.de</a>
+        </div>
+
+        <div class="leagalNotice">
+            <p>
+            <h3 class="subtitle">Haftungsausschluss:</h3>
+
+            <h4 class="subtitle-table">Haftung für Inhalte</h4>
+            <br>
+            Der Inhalt unserer Seiten wurde mit größter Sorgfalt erstellt. Wir können jedoch nicht für die Richtigkeit,
+            Vollständigkeit und Aktualität der Inhalte garantieren. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 des
+            Telemediengesetzes (TMG) für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+            Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte
+            fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit
+            hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen
+            Gesetzen bleiben hiervon unberührt. Eine Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer
+            konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese
+            Inhalte umgehend entfernen.
+            <br><br>
+            <h4 class="subtitle-table">Urheberrechte</h4>
+            <br>
+            Die Inhalte und Werke, die von den Betreibern der Website auf diesen Seiten erstellt wurden, unterliegen dem
+            deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb
+            der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors oder Erstellers.
+            Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit
+            die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet.
+            Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie dennoch auf eine
+            Urheberrechtsverletzung aufmerksam werden, informieren Sie uns bitte. Bei Bekanntwerden von
+            Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+            <br><br>
+            <h4 class="subtitle-table">Datenschutz</h4>
+            <br>
+
+            Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren
+            Seiten personenbezogene Daten (z. B. Name, Adresse oder E-Mail-Adressen) erhoben werden, erfolgt dies stets
+            auf freiwilliger Basis, soweit möglich. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an
+            Dritte weitergegeben.
+            <br>
+            Wir möchten darauf hinweisen, dass die Datenübertragung über das Internet (z. B. die Kommunikation per
+            E-Mail) Sicherheitslücken aufweisen kann. Ein vollständiger Schutz der Daten vor dem Zugriff durch Dritte
+            ist nicht möglich.
+            <br>
+            Die Verwendung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur
+            Übersendung von nicht ausdrücklich angeforderten Werbe- und Informationsmaterialien wird hiermit
+            ausdrücklich untersagt. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der
+            unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.
+            <br><br>
+
+            Das Impressum wurde generiert mit <a class="link" href="https://www.impressum-generator.de"
+                target="_blank">Impressum
+                Generator</a> von
+            <a class="link" href="https://www.kanzlei-hasselbach.de/" target="_blank">Kanzlei Hasselbach, Anwälte für
+                Arbeitsrecht und Familienrecht.
+            </a>
+        </div>
+        }@else{
+        <div class="address">
+            <h3 class="subtitle">Imprint</h3>
+            Alexander Solms<br>
+            Lößniger Straße 15<br>
+            04275 Leipzig<br>
+            Phone: 015679 234861<br>
+            Email: <a class="link" href='mailto:mail@alexander-solms.de'>mail&#64;alexander-solms.de</a>
+        </div>
+
         <div class="leagalNotice">
             <p>
             <h3 class="subtitle">Disclaimer:</h3>
-            
+
             <h4 class="subtitle-table">Liability for Content</h4>
             <br>
             The contents of our pages have been created with the utmost care. However, we cannot guarantee the
@@ -70,8 +133,10 @@
 
             Imprint generated with the <a class="link" href="https://www.impressum-generator.de" target="_blank">Imprint
                 Generator</a> from
-            <a class="link" href="https://www.kanzlei-hasselbach.de/" target="_blank">Kanzlei Hasselbach, Lawyers for Labor Law
+            <a class="link" href="https://www.kanzlei-hasselbach.de/" target="_blank">Kanzlei Hasselbach, Lawyers for
+                Labor Law
                 and Family Law</a>
         </div>
+        }
     </div>
 </section>
