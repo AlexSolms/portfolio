@@ -21,7 +21,7 @@
 
 .upBtn {
 
-  left: 90vw;
+  left: 85vw;
   z-index: 98;
   width: 34px;
   height: 34px;
@@ -35,6 +35,9 @@
   transition: 0.3s;
   cursor: pointer;
 
+  @media screen and (min-width: 500px){
+    left: 90vw;
+  }
   &:hover {
     border-color: rgba(250, 121, 2, 1);
     color: rgba(250, 121, 2, 1);
