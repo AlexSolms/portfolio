@@ -7,18 +7,16 @@ export class GlobalvarService {
 
   constructor() { }
 
-  test:string = "hallo";
-  translate:boolean=false;
+ 
+  translate:boolean=true;
   footerInView:boolean=false;
-  imgPath:string= 'assets/img/icons/united-28519.svg';
+
   
   fnTranslate(){
-    if(!this.translate){
-      this.imgPath = 'assets/img/icons/germany-31017.svg';
-      this.translate = true;
-    }else{
-      this.imgPath = 'assets/img/icons/united-28519.svg';
+    if(this.translate){
       this.translate = false;
+    }else{
+      this.translate = true;
     }
   }
 

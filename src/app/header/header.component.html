@@ -5,9 +5,7 @@
                 </div>
 
                 <div class="menuDesktop">
-                        <div class="flagcon">
-                                <img src="{{data.imgPath}}" alt="" (click)="data.fnTranslate()">
-                        </div>
+                       
                         @if(data.translate){
                         <a href="#idAboutMe">Über mich</a>
                         <a href="#idMySkills">Fähigkeiten</a>
@@ -17,6 +15,19 @@
                         <a href="#idMySkills">Skills</a>
                         <a href="#idPortfolio">Portfolio</a>
                         }
+                        <div class="translateSwitchContainer">
+                                <div class="translateSwitch"> 
+                                        <span 
+                                        (click)="data.translate ? null : data.fnTranslate()"
+                                        [ngClass]="{'inactive': data.translate, 'active': !data.translate}"
+                                        >DE</span>
+                                        |
+                                        <span 
+                                        (click)="!data.translate ? null : data.fnTranslate()"
+                                        [ngClass]="{'active': data.translate, 'inactive': !data.translate}"
+                                        >EN</span>
+                                </div>
+                        </div>
                 </div>
                 <app-menu></app-menu>
         </div>

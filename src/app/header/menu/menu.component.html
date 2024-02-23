@@ -1,6 +1,10 @@
 <section>
-  <div class="flagcon">
-    <img src="{{data.imgPath}}" alt="" (click)="data.fnTranslate()">
+  <div class="translateSwitchContainer">
+    <div class="translateSwitch">
+      <span (click)="data.translate ? null : data.fnTranslate()" [ngClass]="{'active': !data.translate}">DE</span>
+      |
+      <span (click)="!data.translate ? null : data.fnTranslate()" [ngClass]="{'active': data.translate}">EN</span>
+    </div>
   </div>
   <div class="burger-menu" [class.active]="active" (click)="onBurgerClicked()">
 
@@ -8,7 +12,7 @@
       <div class="burger-inner"></div>
     </div>
   </div>
-
+  
   <div id="idMenuOpen" class="closedMenu" [ngClass]="{'openMenu': active}">
 
     <div class="menuLinkContainer">
@@ -18,11 +22,12 @@
       <a href="#idPortfolio" (click)="onBurgerClicked()">Portfolio</a>
       <a href="#idContact" (click)="onBurgerClicked()">Kontakt</a>
       } @else {
-        <a href="#idAboutMe" (click)="onBurgerClicked()">About me</a>
+      <a href="#idAboutMe" (click)="onBurgerClicked()">About me</a>
       <a href="#idMySkills" (click)="onBurgerClicked()">My skills</a>
       <a href="#idPortfolio" (click)="onBurgerClicked()">Portfolio</a>
       <a href="#idContact" (click)="onBurgerClicked()">Contact</a>
       }
+
     </div>
 
   </div>
