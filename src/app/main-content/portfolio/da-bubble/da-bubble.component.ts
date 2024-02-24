@@ -24,8 +24,5 @@ export class DaBubbleComponent {
     } 
 
   }
-/* 
-  ngOnInit(){
-AOS.init();
-  } */
+
 }
