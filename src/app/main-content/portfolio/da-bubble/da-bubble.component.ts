@@ -12,6 +12,9 @@ import AOS from 'aos';
 export class DaBubbleComponent {
   data = inject(GlobalvarService);
 
+  disable:boolean = true;
+  showMessage: boolean = false;
+
   @ViewChild('daBubble') divFooter!: ElementRef;
 
   @HostListener('document:scroll', ['$event'])
@@ -23,6 +26,16 @@ export class DaBubbleComponent {
       AOS.init();
     } 
 
+  }
+
+  showPopup(event: MouseEvent) {
+    if (this.disable) {
+      event.preventDefault();
+      this.showMessage = true;
+      setTimeout(() => {
+        this.showMessage = false;
+      }, 2000); // Popup wird nach 2 Sekunden wieder ausgeblendet
+    }
   }
 
 }

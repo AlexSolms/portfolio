@@ -1,29 +1,38 @@
 <section #daBubble>
-    <div class="imgContainer" 
-    data-aos="fade-down-right"
-    data-aos-easing="linear"
-    data-aos-duration="500"
-    >
-        <img src="assets/img/CRMSmall.png" alt="">
+    <div class="imgContainer" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="500">
+        <img src="assets/img/DABubble.png" alt="">
     </div>
     <div class="infoContainer">
-        <h3>Simple CRM</h3>
-        <p class="skillset">Angular | Firebase</p>
+        <h3>DABubble</h3>
+        <p class="skillset">Angular | HTML | SCSS | Firebase</p>
         <p class="description">
             @if(data.translate){
-            Platzhalter für ein Folgeprojekt, wie ein einfaches CMR mit CRUD-Funktionalität.
+            Ein Chat Programm, mit Slack als Vorbild.
             }@else{
-            Placeholder for a very simple Customer Relationship Management system working with CRUD functionality.
+            A chat program using Slack as a model.
             }</p>
         <div class="btnContainer">
             <div class="btnFrame">
-                <a class="btnStettings testbtn" href="https://simple-crm.alexander-solms.de/" target="_blank">
+                <a [class.disable]="disable" class="btnStettings testbtn" href="#" (click)="showPopup($event)"
+                    target="_blank">
                     @if(data.translate){Livetest}@else{Live test}</a>
+                    @if(showMessage){
+                        <div class="popupContainer">
+                            <div class="popupInnerContainer">
+                            @if(data.translate){
+                                Das Projekt ist in Arbeit.<br> Details auf GitHub.
+                                }@else{
+                                The project is in progress. <br>Details on GitHub.
+                                }
+                            </div>
+                        </div>
+                        }
             </div>
             <div class="btnFrame">
-                <a class="btnStettings gitBtn" href="https://simple-crm.alexander-solms.de/" target="_blank">GitHub</a>
+                <a class="btnStettings gitBtn" href="https://github.com/AlexSolms/DABubble" target="_blank">GitHub</a>
             </div>
 
         </div>
+      
     </div>
 </section>
