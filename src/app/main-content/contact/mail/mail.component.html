@@ -3,7 +3,7 @@
         <div class="inputField">
             <label for="idName"></label>
             <input class="fieldStyle" #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" id="idName"
-                [placeholder]="data.translate ? 'Ihr Name bitte' : 'Your name please'" required
+                [placeholder]="data.translate ? 'Ihr Name' : 'Your name please'" required
                 [ngClass]="{'invalid':!name.valid && name.touched,'valid':name.valid}" minlength="3" maxlength="30">
             @if (!name.valid && name.touched){
             <img src="assets/img/icons/warningSign.svg" alt="empty" id="idEmptyMessage" class="emptySign">
@@ -29,7 +29,7 @@
             <label for="idEmail"></label>
             <input class="fieldStyle" #mail="ngModel" [(ngModel)]="contactData.email" type="email" name="email"
                 id="idEmail" required [ngClass]="{'invalid':!mail.valid && mail.touched,'valid':mail.valid}"
-                [placeholder]="data.translate ? 'Ihre E-Mail bitte' : 'Your email'"
+                [placeholder]="data.translate ? 'Ihre E-Mail' : 'Your email'"
                 pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
             @if (!mail.valid && mail.touched){
             <img src="assets/img/icons/warningSign.svg" alt="empty" id="idEmptyMessage" class="emptySign">
